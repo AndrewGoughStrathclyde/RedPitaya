@@ -18,7 +18,7 @@ SRCS = $(subst .o,.c, $(OBJS)))
 TARGET=rp_remote_acquire
 
 # GCC compiling & linking flags
-CFLAGS=-std=gnu99 -O2 -Wall -Werror
+CFLAGS=-std=gnu99 -O2 -I../../OS/driver/rpad/src -pthread
 
 # Additional libraries which needs to be dynamically linked to the executable
 # -lm - System math library (used by cos(), sin(), sqrt(), ... functions)
@@ -66,4 +66,3 @@ clean:
 install:
 	mkdir -p $(INSTALL_DIR)/bin
 	cp $(TARGET) $(INSTALL_DIR)/bin
-	cp ddrdump.bit $(INSTALL_DIR)/bin

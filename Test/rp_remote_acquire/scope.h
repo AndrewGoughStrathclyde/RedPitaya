@@ -44,6 +44,6 @@ struct scope_parameter {
 };
 
 int scope_init(struct scope_parameter *param, option_fields_t *options);
-void scope_cleanup(struct scope_parameter *param, option_fields_t *options);
+void scope_cleanup(struct scope_parameter *param);
 
 #endif /* SCOPE_H_ */

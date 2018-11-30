@@ -29,68 +29,25 @@
 
 #include <stddef.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <sys/mman.h>
 #include <unistd.h>
-//#include <rp_scope.h>
-#define RPAD_SCOPE_CHA_BUF	0x00000000
-#define RPAD_SCOPE_CHB_BUF	0x00200000
+#include <rp_scope.h>
 
 #include "options.h"
 #include "scope.h"
 
-#define RAM_A_ADDRESS           0x1e000000UL
-#define RAM_A_SIZE              0x01000000UL
-#define RAM_B_ADDRESS           0x1f000000UL
-#define RAM_B_SIZE              0x01000000UL
-
-static int load_bitstream(char *name);
-static int set_axi_64bit_mode();
-static int restore_axi_settings();
-static void start_scope(struct scope_parameter *param);
-static void reset_dumping(struct scope_parameter *param);
-static void start_dumping(struct scope_parameter *param);
-
-static unsigned long axi_hp0_clock;
-static unsigned long axi_hp0_read_mode;
-static unsigned long axi_hp0_write_mode;
-
 int scope_init(struct scope_parameter *param, option_fields_t *options)
 {
 	off_t buf_a_addr, buf_b_addr;
-	size_t buf_a_size, buf_b_size;
 	int decimation = options->scope_dec;
-
-	if (load_bitstream(options->bitstream)) {
-		fprintf(stderr, "loading ddrdump.bit into FPGA failed, %d\n", errno);
-		return -1;
-	}
-
-	if (set_axi_64bit_mode()) {
-		fprintf(stderr, "setting AXI HP0 mode failed, %d\n", errno);
-		return -1;
-	}
 
 	memset(param, 0, sizeof(*param));
 
 	param->channel = options->scope_chn;
-	if (options->use_rpad) {
-		/* TODO get phys addr and size from sysfs */
-		buf_a_addr = RPAD_SCOPE_CHA_BUF;
-		buf_a_size = 0x00200000;
-		buf_b_addr = RPAD_SCOPE_CHB_BUF;
-		buf_b_size = 0x00200000;
-		param->scope_fd = open("/dev/rpad_scope0", O_RDWR);
-	} else {
-		buf_a_addr = RAM_A_ADDRESS;
-		buf_a_size = RAM_A_SIZE;
-		buf_b_addr = RAM_B_ADDRESS;
-		buf_b_size = RAM_B_SIZE;
-		param->scope_fd = open("/dev/mem", O_RDWR);
-	}
+	param->scope_fd = open("/dev/rpad_scope0", O_RDWR);
 	if (param->scope_fd < 0) {
 		fprintf(stderr, "open scope failed, %d\n", errno);
 		return -1;
@@ -105,7 +62,9 @@ int scope_init(struct scope_parameter *param, option_fields_t *options)
 	}
 
 	if (param->channel == 0 || param->channel == 2) {
-		param->buf_a_size = buf_a_size;
+		/* TODO get phys addr and size from sysfs */
+		param->buf_a_size = 0x00200000;
+		buf_a_addr = RPAD_SCOPE_CHA_BUF;
 		param->mapped_buf_a = mmap(NULL, param->buf_a_size, PROT_READ,
 		                           MAP_SHARED, param->scope_fd,
 		                           buf_a_addr);
@@ -117,7 +76,9 @@ int scope_init(struct scope_parameter *param, option_fields_t *options)
 		}
 	}
 	if (param->channel == 1 || param->channel == 2) {
-		param->buf_b_size = buf_b_size;
+		/* TODO get phys addr and size from sysfs */
+		param->buf_b_size = 0x00200000;
+		buf_b_addr = RPAD_SCOPE_CHB_BUF;
 		param->mapped_buf_b = mmap(NULL, param->buf_b_size, PROT_READ,
 		                           MAP_SHARED, param->scope_fd,
 		                           buf_b_addr);
@@ -133,13 +94,14 @@ int scope_init(struct scope_parameter *param, option_fields_t *options)
 		param->decimation <<= 1;
 	param->decimation >>= 1;
 
-	if (!param->mapped_io)
+	if (!param->mapped_io) {
 		goto out;
+	}
 
 	/* set up scope decimation */
-	*(volatile unsigned long *)(param->mapped_io + 0x0014) = param->decimation;
+	*(unsigned long *)(param->mapped_io + 0x14) = param->decimation;
 	if (param->decimation)
-		*(volatile unsigned long *)(param->mapped_io + 0x0028) = 1;
+		*(unsigned long *)(param->mapped_io + 0x28) = 1;
 
 	/* set up filters
 	 * SCOPE_a_filt_aa		0x00000030UL
@@ -155,51 +117,45 @@ int scope_init(struct scope_parameter *param, option_fields_t *options)
 	if (options->scope_equalizer) {
 		if (options->scope_hv) {
 			/* Low gain = HV */
-			*(volatile unsigned long *)(param->mapped_io + 0x0030) = 0x4C5F;
-			*(volatile unsigned long *)(param->mapped_io + 0x0034) = 0x2F38B;
-			*(volatile unsigned long *)(param->mapped_io + 0x0040) = 0x4C5F;
-			*(volatile unsigned long *)(param->mapped_io + 0x0044) = 0x2F38B;
+			*(unsigned long *)(param->mapped_io + 0x30) = 0x4C5F;
+			*(unsigned long *)(param->mapped_io + 0x34) = 0x2F38B;
+			*(unsigned long *)(param->mapped_io + 0x40) = 0x4C5F;
+			*(unsigned long *)(param->mapped_io + 0x44) = 0x2F38B;
 		} else {
 			/* High gain = LV */
-			*(volatile unsigned long *)(param->mapped_io + 0x0030) = 0x7D93;
-			*(volatile unsigned long *)(param->mapped_io + 0x0034) = 0x437C7;
-			*(volatile unsigned long *)(param->mapped_io + 0x0040) = 0x7D93;
-			*(volatile unsigned long *)(param->mapped_io + 0x0044) = 0x437C7;
+			*(unsigned long *)(param->mapped_io + 0x30) = 0x7D93;
+			*(unsigned long *)(param->mapped_io + 0x34) = 0x437C7;
+			*(unsigned long *)(param->mapped_io + 0x40) = 0x7D93;
+			*(unsigned long *)(param->mapped_io + 0x44) = 0x437C7;
 		}
 	} else {
-		*(volatile unsigned long *)(param->mapped_io + 0x0030) = 0;
-		*(volatile unsigned long *)(param->mapped_io + 0x0034) = 0;
-		*(volatile unsigned long *)(param->mapped_io + 0x0040) = 0;
-		*(volatile unsigned long *)(param->mapped_io + 0x0044) = 0;
+		*(unsigned long *)(param->mapped_io + 0x30) = 0;
+		*(unsigned long *)(param->mapped_io + 0x34) = 0;
+		*(unsigned long *)(param->mapped_io + 0x40) = 0;
+		*(unsigned long *)(param->mapped_io + 0x44) = 0;
 	}
 
 	/* Shaping filter */
 	if (options->scope_shaping) {
-		*(volatile unsigned long *)(param->mapped_io + 0x0038) = 0xd9999a;
-		*(volatile unsigned long *)(param->mapped_io + 0x003c) = 0x2666;
-		*(volatile unsigned long *)(param->mapped_io + 0x0048) = 0xd9999a;
-		*(volatile unsigned long *)(param->mapped_io + 0x004c) = 0x2666;
+		*(unsigned long *)(param->mapped_io + 0x38) = 0xd9999a;
+		*(unsigned long *)(param->mapped_io + 0x3c) = 0x2666;
+		*(unsigned long *)(param->mapped_io + 0x48) = 0xd9999a;
+		*(unsigned long *)(param->mapped_io + 0x4c) = 0x2666;
 	} else {
-		*(volatile unsigned long *)(param->mapped_io + 0x0038) = 0xffffff;
-		*(volatile unsigned long *)(param->mapped_io + 0x003c) = 0;
-		*(volatile unsigned long *)(param->mapped_io + 0x0048) = 0xffffff;
-		*(volatile unsigned long *)(param->mapped_io + 0x004c) = 0;
+		*(unsigned long *)(param->mapped_io + 0x38) = 0xffffff;
+		*(unsigned long *)(param->mapped_io + 0x3c) = 0;
+		*(unsigned long *)(param->mapped_io + 0x48) = 0xffffff;
+		*(unsigned long *)(param->mapped_io + 0x4c) = 0;
 	}
-
-	if (!options->use_rpad)
-		start_scope(param);
 
 out:
 	return 0;
 }
 
-void scope_cleanup(struct scope_parameter *param, option_fields_t *options)
+void scope_cleanup(struct scope_parameter *param)
 {
-	if (param->mapped_io) {
-		if (!options->use_rpad)
-			reset_dumping(param);
+	if (param->mapped_io)
 		munmap(param->mapped_io, 0x00100000UL);
-	}
 
 	if (param->mapped_buf_a)
 		munmap(param->mapped_buf_a, param->buf_a_size);
@@ -208,165 +164,4 @@ void scope_cleanup(struct scope_parameter *param, option_fields_t *options)
 		munmap(param->mapped_buf_b, param->buf_b_size);
 
 	close(param->scope_fd);
-
-	if (restore_axi_settings()) {
-		fprintf(stderr, "restoring AXI HP0 settings failed, %d\n", errno);
-	}
-}
-
-static int load_bitstream(char *name)
-{
-	int fd_i = -1, fd_o = -1;
-	void *buffer = NULL;
-	const int buffer_size = 65536;
-	ssize_t bytes_read, pos, bytes_written;
-	int rc = -1;
-
-	if (name == NULL)
-		return 0;
-
-	fd_o = open("/dev/xdevcfg", O_WRONLY);
-	if (fd_o < 0)
-		goto out;
-
-	fd_i = open(name, O_RDONLY);
-	if (fd_i < 0)
-		goto out;
-
-	buffer = malloc(buffer_size);
-	if (!buffer)
-		goto out;
-
-	do {
-		bytes_read = read(fd_i, buffer, buffer_size);
-		if (bytes_read < 0)
-			goto out;
-
-		pos = 0;
-		while (pos < bytes_read) {
-			bytes_written = write(fd_o, buffer + pos, bytes_read - pos);
-			if (bytes_written < 0)
-				goto out;
-			pos += bytes_written;
-		}
-	} while (bytes_read > 0);
-
-	rc = 0;
-
-out:
-	if (buffer)
-		free(buffer);
-	if (fd_i >= 0)
-		close(fd_i);
-	if (fd_o >= 0)
-		close(fd_o);
-	return rc;
-}
-
-static int set_axi_64bit_mode()
-{
-	int fd;
-	void *zynq_config;
-
-	fd = open("/dev/mem", O_RDWR);
-	if (fd < 0) {
-		fprintf(stderr, "open /dev/mem failed, %d\n", errno);
-		return -1;
-	}
-
-	zynq_config = mmap(NULL, 0x00010000UL, PROT_WRITE | PROT_READ, MAP_SHARED, fd,
-	                   0xf8000000UL);
-	if (zynq_config == MAP_FAILED) {
-		fprintf(stderr, "mmap ZYNQ configuration failed, %d\n", errno);
-		return -1;
-	}
-
-	/* unlock SLCR */
-	*(volatile unsigned long *)(zynq_config + 0x0008) = 0x0000df0d;
-
-	/* remember AXI_HP0 clock setting */
-	axi_hp0_clock      = *(volatile unsigned long *)(zynq_config + 0x0170);
-
-	/* remember AXI_HP0 modes */
-	axi_hp0_read_mode  = *(volatile unsigned long *)(zynq_config + 0x8000);
-	axi_hp0_write_mode = *(volatile unsigned long *)(zynq_config + 0x8014);
-
-	/* program 125MHz AXI_HP0 clock 64bit read and write channel */
-	*(volatile unsigned long *)(zynq_config + 0x0170) =   0x00100800;
-	*(volatile unsigned long *)(zynq_config + 0x8000) &= ~0x00000001;
-	*(volatile unsigned long *)(zynq_config + 0x8014) &= ~0x00000001;
-
-	munmap(zynq_config, 0x00010000UL);
-	close(fd);
-	return 0;
-}
-
-static int restore_axi_settings()
-{
-	int fd;
-	void *zynq_config;
-
-	fd = open("/dev/mem", O_RDWR);
-	if (fd < 0) {
-		fprintf(stderr, "open /dev/mem failed, %d\n", errno);
-		return -1;
-	}
-
-	zynq_config = mmap(NULL, 0x00010000UL, PROT_WRITE | PROT_READ, MAP_SHARED, fd,
-	                   0xf8000000UL);
-	if (zynq_config == MAP_FAILED) {
-		fprintf(stderr, "mmap ZYNQ configuration failed, %d\n", errno);
-		return -1;
-	}
-
-	/* unlock SLCR */
-	*(volatile unsigned long *)(zynq_config + 0x0008) = 0x0000df0d;
-
-	/* restore settings for AXI_HP0 clock, read and write channel */
-	*(volatile unsigned long *)(zynq_config + 0x0170) = axi_hp0_clock;
-	*(volatile unsigned long *)(zynq_config + 0x8000) = axi_hp0_read_mode;
-	*(volatile unsigned long *)(zynq_config + 0x8014) = axi_hp0_write_mode;
-
-	munmap(zynq_config, 0x00010000UL);
-	close(fd);
-
-	return 0;
-}
-
-static void start_scope(struct scope_parameter *param)
-{
-	/* load buffer addresses */
-	*(volatile unsigned long *)(param->mapped_io + 0x0104) = RAM_A_ADDRESS;
-	*(volatile unsigned long *)(param->mapped_io + 0x0108)
-	        = RAM_A_ADDRESS + param->buf_a_size;
-	*(volatile unsigned long *)(param->mapped_io + 0x010c) = RAM_B_ADDRESS;
-	*(volatile unsigned long *)(param->mapped_io + 0x0110)
-	        = RAM_B_ADDRESS + param->buf_b_size;
-
-	reset_dumping(param);
-	start_dumping(param);
-}
-
-/*
- * Stops the scope and resets the write pointers to the start of the buffers.
- */
-static void reset_dumping(struct scope_parameter *param)
-{
-	/* stop scope */
-	*(volatile unsigned long *)(param->mapped_io + 0x0000) = 0x00000002;
-	/* activate address injection A/B */
-	*(volatile unsigned long *)(param->mapped_io + 0x0100) = 0x0000000c;
-	/* injection takes a few ADC cycles */
-	usleep(5);
-}
-
-/*
- * Starts recording.
- */
-static void start_dumping(struct scope_parameter *param)
-{
-	/* enable dumping on A/B */
-	*(volatile unsigned long *)(param->mapped_io + 0x0100) = 0x00000003;
-	/* arm scope */
-	*(volatile unsigned long *)(param->mapped_io + 0x0000) = 0x00000001;
 }

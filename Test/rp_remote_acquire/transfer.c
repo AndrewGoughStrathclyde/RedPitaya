@@ -41,7 +41,7 @@
 #include <sys/uio.h>
 #include <sys/ioctl.h>
 #include <pthread.h>
-//#include <rp_scope.h>
+#include <rp_scope.h>
 
 #include "options.h"
 #include "scope.h"
@@ -371,7 +371,7 @@ int transfer_data(struct scope_parameter *param, option_fields_t *options, struc
 	if (report_rate && gettimeofday(&start_time, NULL))
 		report_rate = 0;
 
-	if (0) /* TODO depending on mmap success */
+	if (0)  //TODO depending on mmap success 
 		transferred = transfer_readwrite(param, options, handles);
 	else if (options->scope_chn == 2)
 		transferred = transfer_buf_mmap_dual(param, options, &queue_a, &queue_b);
@@ -382,7 +382,7 @@ int transfer_data(struct scope_parameter *param, option_fields_t *options, struc
 		duration = 1000UL * (end_time.tv_sec - start_time.tv_sec)
 		         + (unsigned long)end_time.tv_usec   / 1000UL
 		         - (unsigned long)start_time.tv_usec / 1000UL;
-		printf("transferred %lluB in %lums (rate %.2fMB/s)\n",
+		printf("transferred %ldB in %lums (rate %.2fMB/s)\n",
 		       transferred, duration,
 		       (double)(1000ULL * transferred) / (1024ULL * 1024ULL * duration));
 	}

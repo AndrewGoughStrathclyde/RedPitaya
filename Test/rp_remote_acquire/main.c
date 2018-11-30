@@ -4,7 +4,7 @@
  *  Created on: 7 Jun 2014
  *      Author: nils
  *
- * The MIT License (MIT)
+ * The MIT Licen se (MIT)
  *
  * Copyright (c) 2014 bkinman, Nils Roos
  *
@@ -71,8 +71,6 @@ static option_fields_t g_options =
 	.scope_equalizer = 1,
 	.scope_hv = 0,
 	.scope_shaping = 1,
-	.use_rpad = 0,
-	.bitstream = NULL,
 };
 
 /******************************************************************************
@@ -139,9 +137,10 @@ int main(int argc, char **argv)
 	file_close(&handles);
 
 cleanup_scope:
-	scope_cleanup(&param, &g_options);
+	scope_cleanup(&param);
 cleanup:
 	signal_exit();
 
 	return retval;
-}
+
+ }

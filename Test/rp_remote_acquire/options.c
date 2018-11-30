@@ -54,8 +54,6 @@ static struct option g_long_options[] =
 	{"scope-HV",           no_argument,       NULL, 1  },
 	{"scope-no-equalizer", no_argument,       NULL, 'e'},
 	{"scope-no-shaping",   no_argument,       NULL, 's'},
-	{"use-rpad",           no_argument,       NULL, 'x'},
-	{"load-bitstream",     optional_argument, NULL, 'l'},
 	{NULL, 0, NULL, 0}
 };
 
@@ -70,7 +68,7 @@ int handle_options(int argc, char *argv[], option_fields_t *options)
 	if (argc <= 1)
 		return -1;
 
-	while ((ch = getopt_long(argc, argv, "a:p:q:m:uk:f:g:rhc:d:esxl::", g_long_options, NULL)) != -1)
+	while ((ch = getopt_long(argc, argv, "a:p:q:m:uk:f:g:rhc:d:es", g_long_options, NULL)) != -1)
 	{
 		// check to see if a single character or long option came through
 		switch (ch)
@@ -134,15 +132,6 @@ int handle_options(int argc, char *argv[], option_fields_t *options)
 			break;
 		case 's': // disable shaping filter
 			options->scope_shaping = 0;
-			break;
-		case 'x': // use rpad kernel module
-			options->use_rpad = 1;
-			break;
-		case 'l': // load ddrdump bitstream
-			if (optarg != NULL && strlen(optarg) > 0)
-				options->bitstream = optarg;
-			else
-				options->bitstream = "./ddrdump.bit";
 			break;
 		case '?':
 		case 'h':
@@ -216,12 +205,6 @@ void usage(const char *name)
 	       "\tenable HV equalizer settings (default LV)\n"
 	       "\033[1m-s  --scope-no-shaping\033[0m\n"
 	       "\tdisable shaping filter (default enabled)\n"
-		   "\033[1m-x  --use-rpad\033[0m\n"
-		   "\tuse rpad kernel module for scope access (default use /dev/mem and\n"
-		   "\tassume that the top 32MB of RAM are reserved for the scope)\n"
-		   "\033[1m-l  --load-bitstream [<bitstream>]\033[0m\n"
-		   "\tload specified bitstream into the FPGA during startup (default do\n"
-		   "\tnothing, default filename ./ddrdump.bit)\n"
 	       "\n");
 	printf("Examples:\n");
 	printf("\033[1m%s -m 1 -a 192.168.1.1 -p 1234 -k 0 -c 0 -d 64\033[0m\n"

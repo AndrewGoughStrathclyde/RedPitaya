@@ -1,0 +1,56 @@
+called: C:\cygwin64\bin\gcc.exe
+	H:\PhD\Vivado\TestingEditingDataAcquistion\RedPitaya\Test\rp_remote_acquire
+	C:\cygwin64\bin\gcc.exe
+	-c
+	-std=gnu99
+	-O2
+	-Wall
+	-Werror
+	-I../../OS/driver/rpad/src
+	-pthread
+	main.c
+	-o
+	main.o
+
+called: C:\cygwin64\bin\gcc.exe
+	H:\PhD\Vivado\TestingEditingDataAcquistion\RedPitaya\Test\rp_remote_acquire
+	C:\cygwin64\bin\gcc.exe
+	-c
+	-std=gnu99
+	-O2
+	-Wall
+	-Werror
+	-I../../OS/driver/rpad/src
+	-pthread
+	options.c
+	-o
+	options.o
+
+called: C:\cygwin64\bin\gcc.exe
+	H:\PhD\Vivado\TestingEditingDataAcquistion\RedPitaya\Test\rp_remote_acquire
+	C:\cygwin64\bin\gcc.exe
+	-c
+	-std=gnu99
+	-O2
+	-Wall
+	-Werror
+	-I../../OS/driver/rpad/src
+	-pthread
+	scope.c
+	-o
+	scope.o
+
+called: C:\cygwin64\bin\gcc.exe
+	H:\PhD\Vivado\TestingEditingDataAcquistion\RedPitaya\Test\rp_remote_acquire
+	C:\cygwin64\bin\gcc.exe
+	-c
+	-std=gnu99
+	-O2
+	-Wall
+	-Werror
+	-I../../OS/driver/rpad/src
+	-pthread
+	transfer.c
+	-o
+	transfer.o
+

@@ -1,47 +1,61 @@
 #
-# Authors: Matej Oblak, Iztok Jeras
-# (C) Red Pitaya 2013-2015
+# $Id: Makefile 934 2014-01-09 07:48:05Z matej.oblak $
 #
 # Red Pitaya FPGA/SoC Makefile 
 #
 # Produces:
+#   1. First stage bootloader (FSBL) ELF binary.
+#   2. First stage bootloader with RAM test.
 #   3. FPGA bit file.
-#   1. FSBL (First stage bootloader) ELF binary.
-#   2. Memtest (stand alone memory test) ELF binary.
 #   4. Linux device tree source (dts).
+#
 
-PRJ ?= logic
+INSTALL_DIR ?= .
+THIS_DIR := $(shell pwd)
+
+# settings for x86_64 build machine
+VM=$(XILINX)/java6/lin64/jre/bin
+ECLIPSE=$(XILINX_EDK)/eclipse/lin64/eclipse/eclipse
+FPGA_DIR=release1/fpga
+FPGA_TOOL=vivado
+SDK_EXPORT=$(FPGA_DIR)/$(FPGA_TOOL)/red_pitaya.sdk/SDK/SDK_Export
 
 # build artefacts
-FPGA_BIT    = prj/$(PRJ)/out/red_pitaya.bit
-FSBL_ELF    = prj/$(PRJ)/sdk/fsbl/executable.elf
-MEMTEST_ELF = prj/$(PRJ)/sdk/dram_test/executable.elf
-DEVICE_TREE = prj/$(PRJ)/sdk/dts/system.dts
+FPGA_BIT=$(FPGA_DIR)/$(FPGA_TOOL)/red_pitaya.runs/impl_1/red_pitaya_top.bit
+FSBL_ELF=$(SDK_EXPORT)/fsbl/Debug/fsbl.elf
+DEV_TREE=$(SDK_EXPORT)/device-tree_bsp_0/ps7_cortexa9_0/libsrc/device-tree_v0_00_x/xilinx.dts
 
-# Vivado from Xilinx provides IP handling, FPGA compilation
-# hsi (hardware software interface) provides software integration
-# both tools are run in batch mode with an option to avoid log/journal files
-VIVADO = vivado -nojournal -mode batch
-HSI    = hsi    -nolog -nojournal -mode batch
+.PHONY: all clean install memtest
 
-.PHONY: all clean project
-
-all: $(FPGA_BIT) $(FSBL_ELF) $(DEVICE_TREE)
-
-# TODO: clean should go into each project
-clean:
-	rm -rf out .Xil .srcs sdk project
-	rm -rf prj/$(PRJ)/out prj/$(PRJ)/.Xil prj/$(PRJ)/.srcs prj/$(PRJ)/sdk prj/$(PRJ)/project
-
-project:
-	vivado -source red_pitaya_vivado_project.tcl -tclargs $(PRJ)
+all: $(FPGA_BIT) $(FSBL_ELF) $(DEV_TREE)
 
 $(FPGA_BIT):
-	$(VIVADO) -source red_pitaya_vivado.tcl -tclargs $(PRJ)
-	./synCheck.sh
+ifdef FPGA_PREBUILT_2014_2
+	mkdir --parents $(SDK_EXPORT)/hw
+	cp $(FPGA_PREBUILT_2014_2)/ps7_init.* $(SDK_EXPORT)/hw/
+	cp $(FPGA_PREBUILT_2014_2)/system.hwh $(SDK_EXPORT)/hw/system.xml
+	mkdir --parents $(FPGA_DIR)/$(FPGA_TOOL)/red_pitaya.runs/impl_1
+	cp $(FPGA_PREBUILT_2014_2)/red_pitaya_top.bit $(FPGA_DIR)/$(FPGA_TOOL)/red_pitaya.runs/impl_1/
+	cd $(FPGA_DIR); cat $(THIS_DIR)/patches/bsp/*.patch | patch -p2
+else
+	make -C $(FPGA_DIR) FPGA_TOOL=$(FPGA_TOOL) fpga
+endif
 
-$(FSBL_ELF): $(FPGA_BIT)
-	$(HSI) -source red_pitaya_hsi_fsbl.tcl -tclargs $(PRJ)
+$(FSBL_ELF):
+	make -C $(FPGA_DIR) FPGA_TOOL=$(FPGA_TOOL) sw_package
 
-$(DEVICE_TREE): $(FPGA_BIT)
-	$(HSI) -source red_pitaya_hsi_dts.tcl -tclargs $(PRJ)
+clean:
+	make -C $(FPGA_DIR) FPGA_TOOL=$(FPGA_TOOL) clean
+
+memtest:
+	cp $(FSBL_ELF) $(INSTALL_DIR)
+	cd $(FPGA_DIR); cat $(THIS_DIR)/patches/memtest/*.patch | patch -p2
+	rm $(FSBL_ELF)
+	rm -f `find $(SDK_EXPORT)/fsbl/ -name \*.o`
+	make -C $(FPGA_DIR) FPGA_TOOL=$(FPGA_TOOL) fsbl
+	cp $(FSBL_ELF) $(INSTALL_DIR)/memtest.elf
+
+install: memtest
+	cp $(FPGA_BIT) $(INSTALL_DIR)/fpga.bit
+	cp $(DEV_TREE) $(INSTALL_DIR)/devicetree.dts
+	patch $(INSTALL_DIR)/devicetree.dts $(FPGA_DIR)/image/src/device_tree_$(FPGA_TOOL).patch

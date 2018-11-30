@@ -1,0 +1,30 @@
+--- a/fpga/image/src/device_tree_vivado.patch
++++ b/fpga/image/src/device_tree_vivado.patch
+@@ -30,26 +30,18 @@
+  		} ;
+ 		ps7_intc_dist_0: ps7-intc-dist@f8f01000 {
+ 			compatible = "xlnx,ps7-intc-dist-1.00.a";
+-@@ -377,15 +387,15 @@
++@@ -377,11 +387,11 @@
+ 			reg = < 0xe0002000 0x1000 >;
+ 			xlnx,usb-reset = "MIO 48";
+ 		} ;
+ -		ps7_xadc: ps7-xadc@f8007100 {
+ -			compatible = "xlnx,ps7-xadc-1.00.a";
+--			reg = < 0xf8007100 0x20 >;
+--		} ;
+--		ps7_xadc: ps7-xadc@f8007100 {
+--			compatible = "xlnx,ps7-xadc-1.00.a";
+ -			interrupt-parent = <&ps7_scugic_0>;
+ -			interrupts = < 0 7 4 >;
+ -			reg = < 0xf8007100 0x20 >;
+ -		} ;
+ +//		ps7_xadc: ps7-xadc@f8007100 {
+ +//			compatible = "xlnx,ps7-xadc-1.00.a";
+-+//			reg = < 0xf8007100 0x20 >;
+-+//		} ;
+-+//		ps7_xadc: ps7-xadc@f8007100 {
+-+//			compatible = "xlnx,ps7-xadc-1.00.a";
+ +//			interrupt-parent = <&ps7_scugic_0>;
+ +//			interrupts = < 0 7 4 >;
+ +//			reg = < 0xf8007100 0x20 >;

@@ -52,8 +52,6 @@ struct option_fields_
 	int scope_hv;
 	int scope_equalizer;
 	int scope_shaping;
-	int use_rpad;
-	char *bitstream;
 };
 typedef struct option_fields_ option_fields_t;
 

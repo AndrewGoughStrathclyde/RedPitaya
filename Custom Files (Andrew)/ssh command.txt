@@ -1,0 +1,5 @@
+For Matlab as Server - ./rp_remote_acquire -m 1 -a 169.254.145.96 -c 0 -d 4
+At a decimation of 4. 
+
+For Matlab as Client - ./rp_remote_acquire -m 2 -a 169.254.145.96 -c 0 -d 4
+At a decimation of 4. 

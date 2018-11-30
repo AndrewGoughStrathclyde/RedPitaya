@@ -1,0 +1,25 @@
+--- a/fpga/vivado/red_pitaya.sdk/SDK/SDK_Export/bsp_repos/bsp/device-tree_v0_00_x/data/device-tree_v2_1_0.tcl
++++ b/fpga/vivado/red_pitaya.sdk/SDK/SDK_Export/bsp_repos/bsp/device-tree_v0_00_x/data/device-tree_v2_1_0.tcl
+@@ -397,7 +397,7 @@ proc generate_device_tree {filepath bootargs {consoleip ""}} {
+ 
+ 			set bus_name [xget_hw_busif_value $hwproc_handle "M_AXI_DP"]
+ 			if { [string compare -nocase $bus_name ""] != 0 } {
+-				set tree [bus_bridge $hwproc_handle $intc 0 "M_AXI_DP" "" $ips "ps7_pl310 ps7_xadc"]
++				set tree [bus_bridge $hwproc_handle $intc 0 "M_AXI_DP" "" $ips]
+ 				set tree [tree_append $tree [list ranges empty empty]]
+ 				lappend ip_tree $tree
+ 			}
+@@ -1138,11 +1138,11 @@ proc zynq_irq {ip_tree intc name } {
+ 		{ps7_scuwdt_0} {1 14 0x301} \
+ 		{nIRQFIXME} {1 15 8} \
+ 		{ps7_core_parity} {0 0 1 0 1 1} \
+-		{ps7_pl310} {0 2 4} \
++		{ps7_pl310_0} {0 2 4} \
+ 		{ps7_l2cc} {0 3 4} \
+ 		{ps7_ocm} {0 4 4} \
+ 		{ps7_pmu} {0 5 4 0 6 4} \
+-		{ps7_xadc} {0 7 4} \
++		{ps7_xadc_0} {0 7 4} \
+ 		{ps7_dev_cfg_0} {0 8 4} \
+ 		{ps7_wdt_0} {0 9 1} \
+ 		{ps7_ttc_0} {0 10 4 0 11 4 0 12 4} \

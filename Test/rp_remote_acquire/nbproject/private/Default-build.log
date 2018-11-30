@@ -1,0 +1,11 @@
+gcc -c -std=gnu99 -O2 -Wall -Werror -I../../OS/driver/rpad/src -pthread main.c -o main.o
+gcc -c -std=gnu99 -O2 -Wall -Werror -I../../OS/driver/rpad/src -pthread options.c -o options.o
+gcc -c -std=gnu99 -O2 -Wall -Werror -I../../OS/driver/rpad/src -pthread scope.c -o scope.o
+gcc -c -std=gnu99 -O2 -Wall -Werror -I../../OS/driver/rpad/src -pthread transfer.c -o transfer.o
+transfer.c: In function 'transfer_data':
+transfer.c:385:26: error: format '%llu' expects argument of type 'long long unsigned int', but argument 2 has type 'u_int64_t {aka long unsigned int}' [-Werror=format=]
+   printf("transferred %lluB in %lums (rate %.2fMB/s)\n",
+                       ~~~^
+                       %lu
+cc1: all warnings being treated as errors
+make: *** [Makefile:53: transfer.o] Error 1
