@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Fri Nov 30 14:54:19 2018
+| Date         : Fri Nov 30 16:16:26 2018
 | Host         : eee-cmp-52 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file red_pitaya_top_methodology_drc_routed.rpt -pb red_pitaya_top_methodology_drc_routed.pb -rpx red_pitaya_top_methodology_drc_routed.rpx
 | Design       : red_pitaya_top
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 72
+             Violations found: 75
 +-----------+----------+------------------------------------------------------+------------+
 | Rule      | Severity | Description                                          | Violations |
 +-----------+----------+------------------------------------------------------+------------+
-| SYNTH-6   | Warning  | Timing of a block RAM might be sub-optimal           | 6          |
+| SYNTH-6   | Warning  | Timing of a block RAM might be sub-optimal           | 9          |
 | SYNTH-11  | Warning  | DSP output not registered                            | 8          |
 | TIMING-6  | Warning  | No common primary clock between related clocks       | 1          |
 | TIMING-7  | Warning  | No common node between related clocks                | 1          |
@@ -42,17 +42,17 @@ Table of Contents
 -----------------
 SYNTH-6#1 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance i_scope/adc_a_buf_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance i_scope/adc_a_buf_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#2 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance i_scope/adc_a_buf_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance i_scope/adc_a_buf_reg_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#3 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance i_scope/adc_a_buf_reg_4, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance i_scope/adc_a_buf_reg_3, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#4 Warning
@@ -62,12 +62,27 @@ Related violations: <none>
 
 SYNTH-6#5 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance i_scope/adc_b_buf_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance i_scope/adc_b_buf_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#6 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance i_scope/adc_b_buf_reg_4, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance i_scope/adc_b_buf_reg_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#7 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance i_scope/adc_b_buf_reg_3, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#8 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance i_scope/adc_b_buf_reg_5, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#9 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance i_scope/adc_b_buf_reg_6, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-11#1 Warning

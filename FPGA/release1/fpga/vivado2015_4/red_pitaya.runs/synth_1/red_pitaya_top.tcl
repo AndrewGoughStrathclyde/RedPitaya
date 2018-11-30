@@ -32,6 +32,7 @@ set_property target_language Verilog [current_project]
 set_property ip_cache_permissions disable [current_project]
 set_property verilog_define TOOL_VIVADO [current_fileset]
 read_verilog -library xil_defaultlib {
+  {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v}
   {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v}
   {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/axi_master.v}
   {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/axi_slave.v}

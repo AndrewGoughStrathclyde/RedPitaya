@@ -515,8 +515,8 @@ wire trig_asg_out ;
 red_pitaya_scope i_scope
 (
   // ADC
-  .adc_a_i         (  adc_a                      ),  // CH 1
-  .adc_b_i         (  adc_b                      ),  // CH 2
+  .adc_a_i         (  adc_a                      ),  // Orig value - adc_a // 14 bit data which is being recorded in channel 1, pre decimation and such 
+  .adc_b_i         (  outputFromLIA              ),  // Orig value - adc_b // 14 bit Data which is being recorded in channel 2, pre decimation and such
   .adc_clk_i       (  adc_clk                    ),  // clock
   .adc_rstn_i      (  adc_rstn                   ),  // reset - active low
   .trig_ext_i      (  1'b0                       ),  // external trigger Disabled for now.
@@ -605,6 +605,16 @@ SignalGeneration sigGen
     .dac_clk_i      ( adc_clk                    )  //Input 125Mz clock
 );
 
+wire [14-1:0] outputFromLIA; 
+
+LockInAmplifier LIA
+(
+    .adcInputChannel1   ( adc_a_i                   ),
+    .dac_clk_i          ( adc_clk                   ),
+    .inPhase            ( signalFromGeneratorB      ),
+    .outPhase           ( signalFromGeneratorC      ),
+    .LIAOutput_O          ( outputFromLIA             )
+);
 
 
 //---------------------------------------------------------------------------------
@@ -658,10 +668,10 @@ wire  [ 15-1: 0] dac_b_sum       ;
 
 // signalFromGeneratorA = Carrier Wave
 // signalFromGeneratorB = Modulation Wave
+// signalFromGeneratorC = Out of Phase Modulation Wave
 
-assign dac_a_sum = $signed(signalFromGeneratorB); // Output 1 - Carrier Wave * 2 (To output at the full ± 1V)
-assign dac_b_sum = $signed(signalFromGeneratorC); // Output 2 - Carrier + Modulation wave
-
+assign dac_a_sum = $signed(signalFromGeneratorB); // Output 1 
+assign dac_b_sum = $signed(signalFromGeneratorC); // Output 2 
 
 always @(*) begin
 
