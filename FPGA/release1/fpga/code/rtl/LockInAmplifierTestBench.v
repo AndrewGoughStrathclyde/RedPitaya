@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ns
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -24,13 +24,13 @@ module LockInAmplifierTestBench;
 
 // DAC signal generation
 
-wire [14-1:0] signalFromGeneratorA;
-wire [14-1:0] signalFromGeneratorB;
-wire [14-1:0] signalFromGeneratorC;
-wire [14-1:0] adc_a;                    //Input In
+wire signed [14-1:0] signalFromGeneratorA;// = 14'b00000000000000;
+wire signed [14-1:0] signalFromGeneratorB;// = 14'b00000000000000;
+wire signed [14-1:0] signalFromGeneratorC;// = 14'b00000000000000;
 
-wire          MHzSync; //Don't need to use this
-reg          adc_clk;
+wire                    MHzSync; //Don't need to use this
+reg                     adc_clk;
+reg signed  [14-1:0]    adc_a;
 
 
 SignalGeneration sigGen
@@ -45,20 +45,30 @@ SignalGeneration sigGen
 // Lock In Amplifier
 
 wire [14-1:0] outputFromLIA; 
+wire [14-1:0] miscRamp;
 
 LockInAmplifier LIA
 (
-    .adcInputChannel1   ( adc_a                     ),
-    .dac_clk_i          ( adc_clk                   ),
-    .inPhase            ( signalFromGeneratorB      ),
-    .outPhase           ( signalFromGeneratorC      ),
-    .LIAOutput_O        ( outputFromLIA             )
+    .adcInputChannel1           ( adc_a                     ),
+    .dac_clk_i                  ( adc_clk                   ),
+    .inPhase                    ( signalFromGeneratorB      ),
+    .outPhase                   ( signalFromGeneratorC      ),
+    .LIAOutput_InPhaseOutput    ( outputFromLIA             ),
+    .LIAOutput_OutPhaseOutput   ( outputFromLIAOutOfPhase   ),
+    .MiscRamp                   ( miscRamp                  ),
+    .mhzClockIn                 ( MHzSync                   )
 );
+
 
     
     initial begin
+    adc_a = 14'b0000000000000;
     adc_clk = 0;
-    forever #1 adc_clk = ~adc_clk;
+    forever #8 begin
+    adc_clk = ~adc_clk;
+    //adc_a = signalFromGeneratorA+signalFromGeneratorB;
+    adc_a = signalFromGeneratorA;
+    end
     end
     
 endmodule

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Wed Dec  5 10:08:13 2018
+| Date         : Tue Dec 11 10:54:21 2018
 | Host         : eee-cmp-52 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file red_pitaya_top_methodology_drc_routed.rpt -pb red_pitaya_top_methodology_drc_routed.pb -rpx red_pitaya_top_methodology_drc_routed.rpx
 | Design       : red_pitaya_top
@@ -23,17 +23,17 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 95
+             Violations found: 106
 +-----------+----------+------------------------------------------------------+------------+
 | Rule      | Severity | Description                                          | Violations |
 +-----------+----------+------------------------------------------------------+------------+
-| SYNTH-6   | Warning  | Timing of a block RAM might be sub-optimal           | 14         |
+| SYNTH-6   | Warning  | Timing of a block RAM might be sub-optimal           | 11         |
 | SYNTH-11  | Warning  | DSP output not registered                            | 8          |
 | SYNTH-13  | Warning  | combinational multiplier                             | 1          |
 | TIMING-6  | Warning  | No common primary clock between related clocks       | 1          |
 | TIMING-7  | Warning  | No common node between related clocks                | 1          |
 | TIMING-9  | Warning  | Unknown CDC Logic                                    | 1          |
-| TIMING-16 | Warning  | Large setup violation                                | 14         |
+| TIMING-16 | Warning  | Large setup violation                                | 28         |
 | TIMING-18 | Warning  | Missing input or output delay                        | 16         |
 | TIMING-28 | Warning  | Auto-derived clock referenced by a timing constraint | 7          |
 | XDCC-5    | Warning  | User Non-Timing constraint/property overwritten      | 4          |
@@ -44,72 +44,57 @@ Table of Contents
 -----------------
 SYNTH-6#1 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance i_scope/adc_a_buf_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance i_scope/adc_a_buf_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#2 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance i_scope/adc_a_buf_reg_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance i_scope/adc_a_buf_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#3 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance i_scope/adc_a_buf_reg_3, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance i_scope/adc_a_buf_reg_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#4 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance i_scope/adc_a_buf_reg_4, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance i_scope/adc_a_buf_reg_5, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#5 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance i_scope/adc_a_buf_reg_5, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance i_scope/adc_b_buf_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#6 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance i_scope/adc_a_buf_reg_6, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance i_scope/adc_b_buf_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#7 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance i_scope/adc_b_buf_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance i_scope/adc_b_buf_reg_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#8 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance i_scope/adc_b_buf_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance i_scope/adc_b_buf_reg_3, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#9 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance i_scope/adc_b_buf_reg_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance i_scope/adc_b_buf_reg_4, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#10 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance i_scope/adc_b_buf_reg_3, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance i_scope/adc_b_buf_reg_5, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-6#11 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance i_scope/adc_b_buf_reg_4, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
-Related violations: <none>
-
-SYNTH-6#12 Warning
-Timing of a block RAM might be sub-optimal  
-The timing for the instance i_scope/adc_b_buf_reg_5, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
-Related violations: <none>
-
-SYNTH-6#13 Warning
-Timing of a block RAM might be sub-optimal  
 The timing for the instance i_scope/adc_b_buf_reg_6, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
-Related violations: <none>
-
-SYNTH-6#14 Warning
-Timing of a block RAM might be sub-optimal  
-The timing for the instance sigGen/clkCounterA_reg_rep, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-11#1 Warning
@@ -174,72 +159,142 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -1.488 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/LIAOutput_reg[0]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.001 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/resultAccumulator_reg[21]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -1.809 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/LIAOutput_reg[1]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.016 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/resultAccumulator_reg[24]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -2.162 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/LIAOutput_reg[2]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.036 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/resultAccumulator_reg[26]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -2.222 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/LIAOutput_reg[3]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.112 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/resultAccumulator_reg[27]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -2.356 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/LIAOutput_reg[4]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.120 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/resultAccumulator_reg[25]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -2.372 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/LIAOutput_reg[6]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.142 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/resultAccumulator_reg[28]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -2.446 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/LIAOutput_reg[7]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.162 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/resultAccumulator_reg[30]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -2.467 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/LIAOutput_reg[5]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.238 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/resultAccumulator_reg[31]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#9 Warning
 Large setup violation  
-There is a large setup violation of -2.472 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/LIAOutput_reg[8]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.246 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/resultAccumulator_reg[29]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#10 Warning
 Large setup violation  
-There is a large setup violation of -2.488 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/LIAOutput_reg[10]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.257 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/resultAccumulator_reg[32]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#11 Warning
 Large setup violation  
-There is a large setup violation of -2.562 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/LIAOutput_reg[11]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.277 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/resultAccumulator_reg[34]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#12 Warning
 Large setup violation  
-There is a large setup violation of -2.583 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/LIAOutput_reg[9]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.353 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/resultAccumulator_reg[35]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#13 Warning
 Large setup violation  
-There is a large setup violation of -2.604 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/LIAOutput_reg[12]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.361 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/resultAccumulator_reg[33]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#14 Warning
 Large setup violation  
-There is a large setup violation of -2.715 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/LIAOutput_reg[13]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.373 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/resultAccumulator_reg[36]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -2.512 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/InPhaseOutput_reg[1]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -2.577 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/InPhaseOutput_reg[2]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -2.579 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/InPhaseOutput_reg[0]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -2.688 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/InPhaseOutput_reg[3]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -2.748 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/InPhaseOutput_reg[5]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -2.792 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/InPhaseOutput_reg[4]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -2.811 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/InPhaseOutput_reg[6]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -2.947 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/InPhaseOutput_reg[7]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -2.967 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/InPhaseOutput_reg[9]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -3.043 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/InPhaseOutput_reg[10]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -3.051 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/InPhaseOutput_reg[8]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -3.062 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/InPhaseOutput_reg[11]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -3.082 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/InPhaseOutput_reg[13]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -3.166 ns between i_analog/adc_dat_a_reg[8]/C (clocked by adc_clk) and LIA/InPhaseOutput_reg[12]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning
@@ -360,225 +415,225 @@ Related violations: <none>
 XDCC-5#1 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on dac_pwm_o[0] overrides a previous user property.
-New Source: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 130)
-Previous Source: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 109)
+New Source: C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 130)
+Previous Source: C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 109)
 Related violations: <none>
 
 XDCC-5#2 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on dac_pwm_o[1] overrides a previous user property.
-New Source: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 130)
-Previous Source: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 109)
+New Source: C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 130)
+Previous Source: C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 109)
 Related violations: <none>
 
 XDCC-5#3 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on dac_pwm_o[2] overrides a previous user property.
-New Source: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 130)
-Previous Source: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 109)
+New Source: C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 130)
+Previous Source: C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 109)
 Related violations: <none>
 
 XDCC-5#4 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on dac_pwm_o[3] overrides a previous user property.
-New Source: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 130)
-Previous Source: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 109)
+New Source: C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 130)
+Previous Source: C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 109)
 Related violations: <none>
 
 XDCH-2#1 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_a_i[10]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_a_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
 Related violations: <none>
 
 XDCH-2#2 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_a_i[11]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_a_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
 Related violations: <none>
 
 XDCH-2#3 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_a_i[12]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_a_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
 Related violations: <none>
 
 XDCH-2#4 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_a_i[13]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_a_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
 Related violations: <none>
 
 XDCH-2#5 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_a_i[14]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_a_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
 Related violations: <none>
 
 XDCH-2#6 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_a_i[15]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_a_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
 Related violations: <none>
 
 XDCH-2#7 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_a_i[2]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_a_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
 Related violations: <none>
 
 XDCH-2#8 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_a_i[3]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_a_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
 Related violations: <none>
 
 XDCH-2#9 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_a_i[4]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_a_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
 Related violations: <none>
 
 XDCH-2#10 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_a_i[5]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_a_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
 Related violations: <none>
 
 XDCH-2#11 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_a_i[6]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_a_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
 Related violations: <none>
 
 XDCH-2#12 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_a_i[7]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_a_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
 Related violations: <none>
 
 XDCH-2#13 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_a_i[8]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_a_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
 Related violations: <none>
 
 XDCH-2#14 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_a_i[9]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_a_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 258)
 Related violations: <none>
 
 XDCH-2#15 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_b_i[10]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_b_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
 Related violations: <none>
 
 XDCH-2#16 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_b_i[11]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_b_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
 Related violations: <none>
 
 XDCH-2#17 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_b_i[12]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_b_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
 Related violations: <none>
 
 XDCH-2#18 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_b_i[13]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_b_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
 Related violations: <none>
 
 XDCH-2#19 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_b_i[14]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_b_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
 Related violations: <none>
 
 XDCH-2#20 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_b_i[15]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_b_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
 Related violations: <none>
 
 XDCH-2#21 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_b_i[2]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_b_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
 Related violations: <none>
 
 XDCH-2#22 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_b_i[3]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_b_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
 Related violations: <none>
 
 XDCH-2#23 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_b_i[4]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_b_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
 Related violations: <none>
 
 XDCH-2#24 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_b_i[5]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_b_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
 Related violations: <none>
 
 XDCH-2#25 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_b_i[6]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_b_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
 Related violations: <none>
 
 XDCH-2#26 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_b_i[7]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_b_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
 Related violations: <none>
 
 XDCH-2#27 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_b_i[8]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_b_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
 Related violations: <none>
 
 XDCH-2#28 Warning
 Same min and max delay values on IO port  
 The same input delay of 3.400 ns has been defined on port 'adc_dat_b_i[9]' relative to clock adc_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock adc_clk 3.400 [get_ports {adc_dat_b_i[*]}]
-H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
+C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc (Line: 259)
 Related violations: <none>
 
 

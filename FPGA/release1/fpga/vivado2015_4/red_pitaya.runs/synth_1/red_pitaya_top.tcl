@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -ruleid {2147483647}  -id {Board 49-4}  -suppress 
 create_project -in_memory -part xc7z010clg400-1
 
@@ -24,31 +25,31 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.cache/wt} [current_project]
-set_property parent.project_path {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.cache/wt [current_project]
+set_property parent.project_path C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_cache_permissions disable [current_project]
 set_property verilog_define TOOL_VIVADO [current_fileset]
 read_verilog -library xil_defaultlib {
-  {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v}
-  {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v}
-  {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/axi_master.v}
-  {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/axi_slave.v}
-  {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/bus_clk_bridge.v}
-  {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_analog.v}
-  {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v}
-  {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid.v}
-  {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v}
-  {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_ps.v}
-  {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v}
-  {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/hdl/system_wrapper.v}
-  {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v}
+  C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v
+  C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v
+  C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/axi_master.v
+  C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/axi_slave.v
+  C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/bus_clk_bridge.v
+  C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_analog.v
+  C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v
+  C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid.v
+  C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v
+  C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_ps.v
+  C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v
+  C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/hdl/system_wrapper.v
+  C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v
 }
-add_files {{H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/system.bd}}
-set_property used_in_implementation false [get_files -all {{h:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc}}]
-set_property used_in_implementation false [get_files -all {{H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/system_ooc.xdc}}]
+add_files C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/system.bd
+set_property used_in_implementation false [get_files -all c:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/system_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -58,11 +59,11 @@ set_property used_in_implementation false [get_files -all {{H:/PhD/Red Pitaya Fo
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc}}
-set_property used_in_implementation false [get_files {{H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc}}]
+read_xdc C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc
+set_property used_in_implementation false [get_files C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc]
 
-read_xdc {{H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/constrs_1/red_pitaya_top.xdc}}
-set_property used_in_implementation false [get_files {{H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/constrs_1/red_pitaya_top.xdc}}]
+read_xdc C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/constrs_1/red_pitaya_top.xdc
+set_property used_in_implementation false [get_files C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/constrs_1/red_pitaya_top.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

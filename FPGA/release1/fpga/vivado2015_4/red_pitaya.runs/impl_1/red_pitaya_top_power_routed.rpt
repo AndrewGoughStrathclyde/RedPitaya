@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Wed Dec  5 10:08:15 2018
+| Date             : Tue Dec 11 10:54:23 2018
 | Host             : eee-cmp-52 running 64-bit major release  (build 9200)
 | Command          : report_power -file red_pitaya_top_power_routed.rpt -pb red_pitaya_top_power_summary_routed.pb -rpx red_pitaya_top_power_routed.rpx
 | Design           : red_pitaya_top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.879        |
+| Total On-Chip Power (W)  | 1.805        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.747        |
-| Device Static (W)        | 0.132        |
+| Dynamic (W)              | 1.675        |
+| Device Static (W)        | 0.130        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 63.3         |
-| Junction Temperature (C) | 46.7         |
+| Max Ambient (C)          | 64.2         |
+| Junction Temperature (C) | 45.8         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,21 +52,21 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.016 |       11 |       --- |             --- |
-| Slice Logic    |     0.011 |     4448 |       --- |             --- |
-|   LUT as Logic |     0.010 |     2066 |     17600 |           11.74 |
-|   CARRY4       |    <0.001 |      174 |      4400 |            3.95 |
-|   Register     |    <0.001 |     1785 |     35200 |            5.07 |
-|   F7/F8 Muxes  |    <0.001 |       42 |     17600 |            0.24 |
-|   Others       |     0.000 |      183 |       --- |             --- |
-| Signals        |     0.015 |     3907 |       --- |             --- |
-| Block RAM      |     0.036 |       17 |        60 |           28.33 |
+| Clocks         |     0.017 |       11 |       --- |             --- |
+| Slice Logic    |     0.012 |     4525 |       --- |             --- |
+|   LUT as Logic |     0.010 |     2084 |     17600 |           11.84 |
+|   CARRY4       |     0.001 |      186 |      4400 |            4.23 |
+|   Register     |    <0.001 |     1816 |     35200 |            5.16 |
+|   F7/F8 Muxes  |    <0.001 |       50 |     17600 |            0.28 |
+|   Others       |     0.000 |      185 |       --- |             --- |
+| Signals        |     0.015 |     3945 |       --- |             --- |
+| Block RAM      |     0.035 |     16.5 |        60 |           27.50 |
 | PLL            |     0.102 |        1 |         2 |           50.00 |
 | DSPs           |     0.013 |       11 |        80 |           13.75 |
-| I/O            |     0.271 |       49 |       100 |           49.00 |
+| I/O            |     0.199 |       49 |       100 |           49.00 |
 | PS7            |     1.283 |        1 |       --- |             --- |
-| Static Power   |     0.132 |          |           |                 |
-| Total          |     1.879 |          |           |                 |
+| Static Power   |     0.130 |          |           |                 |
+| Total          |     1.805 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,19 +77,19 @@ Table of Contents
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.106 |       0.098 |      0.008 |
-| Vccaux    |       1.800 |     0.066 |       0.058 |      0.009 |
-| Vcco33    |       3.300 |     0.079 |       0.078 |      0.001 |
+| Vccaux    |       1.800 |     0.065 |       0.056 |      0.008 |
+| Vcco33    |       3.300 |     0.058 |       0.057 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.002 |       0.001 |      0.001 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.005 |       0.003 |      0.002 |
+| Vccbram   |       1.000 |     0.004 |       0.003 |      0.002 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.701 |       0.669 |      0.032 |
+| Vccpint   |       1.000 |     0.700 |       0.669 |      0.031 |
 | Vccpaux   |       1.800 |     0.038 |       0.027 |      0.010 |
 | Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.356 |       0.354 |      0.002 |
@@ -157,9 +157,9 @@ Table of Contents
 +------------------------------+-----------+
 | Name                         | Power (W) |
 +------------------------------+-----------+
-| red_pitaya_top               |     1.747 |
-|   LIA                        |     0.004 |
-|   i_analog                   |     0.111 |
+| red_pitaya_top               |     1.675 |
+|   LIA                        |     0.005 |
+|   i_analog                   |     0.110 |
 |   i_pid                      |     0.002 |
 |     i_bridge_pid             |    <0.001 |
 |   i_ps                       |     1.289 |
@@ -170,7 +170,7 @@ Table of Contents
 |         processing_system7_0 |     1.283 |
 |           inst               |     1.283 |
 |         xlconcat_0           |     0.000 |
-|   i_scope                    |     0.069 |
+|   i_scope                    |     0.070 |
 |     adc_a_buffer             |    <0.001 |
 |     adc_b_buffer             |    <0.001 |
 |     i_bridge_scope           |    <0.001 |

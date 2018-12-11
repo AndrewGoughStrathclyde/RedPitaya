@@ -28,11 +28,11 @@ module SignalGeneration
    output     [ 14-1: 0] dac_a_90out_o,     //!               //Cosine Modulation
    output                syncOutput
 );
-    reg [14-1:0]    dacOutputA;
-    reg [14-1:0]    dacOutputB;
-    reg [14-1:0]    dacOutputC;
-    reg [7-1:0]     clkCounterA;
-    reg [9-1:0]     clkCounterB;
+    reg [14-1:0]    dacOutputA = 14'b00000000000000;
+    reg [14-1:0]    dacOutputB = 14'b00000000000000;
+    reg [14-1:0]    dacOutputC = 14'b00000000000000;
+    reg [7-1:0]     clkCounterA = 7'b0000000;
+    reg [9-1:0]     clkCounterB = 9'b000000000;
     reg             sync;
 //always @(posedge dac_clk_i) begin
 //dacOutputA <= 14'b00000000000000; // 0 output
@@ -44,7 +44,7 @@ module SignalGeneration
 
 always @(posedge dac_clk_i) begin
 	case(clkCounterA)
-	7'b0000000: begin dacOutputA <= 14'b00000000000000; dacOutputC <= 14'b00111111111111; sync <= 0;end // Position : 1 , Sin Value : 0 , Cos Value : 4095
+	7'b0000000: begin dacOutputA <= 14'b00000000000000; dacOutputC <= 14'b00111111111111; sync = 0;end // Position : 1 , Sin Value : 0 , Cos Value : 4095
     7'b0000001: begin dacOutputA <= 14'b00000011001101; dacOutputC <= 14'b00111111111001; end // Position : 2 , Sin Value : 206 , Cos Value : 4090
     7'b0000010: begin dacOutputA <= 14'b00000110011010; dacOutputC <= 14'b00111111101010; end // Position : 3 , Sin Value : 411 , Cos Value : 4074
     7'b0000011: begin dacOutputA <= 14'b00001001100111; dacOutputC <= 14'b00111111010000; end // Position : 4 , Sin Value : 615 , Cos Value : 4049
@@ -169,9 +169,9 @@ always @(posedge dac_clk_i) begin
     7'b1111010: begin dacOutputA <= 14'b11110110011000; dacOutputC <= 14'b00111111010000; end // Position : 123 , Sin Value : -615 , Cos Value : 4049
     7'b1111011: begin dacOutputA <= 14'b11111001100101; dacOutputC <= 14'b00111111101010; end // Position : 124 , Sin Value : -411 , Cos Value : 4074
 		default: begin 
+		    sync = 1;
 			dacOutputA <= 14'b11111100110010;        // Position : 125 , Value : -206
 			dacOutputC <= 14'b00111111101010;        // Position : 125 , Value : 4074
-			
 			clkCounterB <= clkCounterB+1;
 		end
 	endcase
@@ -684,7 +684,6 @@ always @(posedge dac_clk_i) begin
         default: begin 
             clkCounterB = 0;
             dacOutputB <= 14'b11111111001100;            // Position : 500 , Value : -51
-            sync <= 1;
         end
     endcase
 end
@@ -696,8 +695,8 @@ end
 //assign dac_b_o = dacOutputB;
 
 assign dac_a_o = dacOutputB; // Carrier wave output goes to A
-assign dac_b_o = dacOutputA; // Modulation wave output goes to B 
-assign dac_a_90out_o = dacOutputC; //Out of Phase modulation output
+assign dac_b_o = ($signed(dacOutputA)>>>2); // Modulation wave output goes to B
+assign dac_a_90out_o = ($signed(dacOutputC)>>>2); //Out of Phase modulation output
 assign syncOutput = sync;
 
  

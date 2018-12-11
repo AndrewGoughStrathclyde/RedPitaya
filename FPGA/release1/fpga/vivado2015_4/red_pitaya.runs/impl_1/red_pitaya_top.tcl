@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -ruleid {2147483647}  -id {Board 49-4}  -suppress 
 
 start_step init_design
@@ -69,17 +70,17 @@ set rc [catch {
   create_project -in_memory -part xc7z010clg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.cache/wt} [current_project]
-  set_property parent.project_path {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.xpr} [current_project]
+  set_property webtalk.parent_dir C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.cache/wt [current_project]
+  set_property parent.project_path C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.xpr [current_project]
   set_property ip_cache_permissions disable [current_project]
   set_property XPM_LIBRARIES {XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet {{H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/red_pitaya_top.dcp}}
+  add_files -quiet C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/red_pitaya_top.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files {{H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/system.bd}}
+  add_files C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/system.bd
   set_param project.isImplRun false
-  read_xdc {{H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc}}
-  read_xdc {{H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/constrs_1/red_pitaya_top.xdc}}
+  read_xdc C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc
+  read_xdc C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/constrs_1/red_pitaya_top.xdc
   set_param project.isImplRun true
   link_design -top red_pitaya_top -part xc7z010clg400-1
   set_param project.isImplRun false

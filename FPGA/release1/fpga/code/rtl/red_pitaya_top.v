@@ -511,12 +511,15 @@ endgenerate
 //  Oscilloscope application
 
 wire trig_asg_out ;
+wire signed [14-1:0] InPhaseLIAOutput;
+wire signed [14-1:0] OutPhaseLIAOutput; 
+wire signed [14-1:0] rampOutput; 
 
 red_pitaya_scope i_scope
 (
   // ADC
   .adc_a_i         (  adc_a                      ),  // Orig value - adc_a // 14 bit data which is being recorded in channel 1, pre decimation and such 
-  .adc_b_i         (  outputFromLIA              ),  // Orig value - adc_b // 14 bit Data which is being recorded in channel 2, pre decimation and such
+  .adc_b_i         (  InPhaseLIAOutput           ),//InPhaseLIAOutput           ),  // Orig value - adc_b // 14 bit Data which is being recorded in channel 2, pre decimation and such
   .adc_clk_i       (  adc_clk                    ),  // clock
   .adc_rstn_i      (  adc_rstn                   ),  // reset - active low
   .trig_ext_i      (  1'b0                       ),  // external trigger Disabled for now.
@@ -603,19 +606,21 @@ SignalGeneration sigGen
     .dac_a_o        ( signalFromGeneratorA       ), //Carrier
     .dac_b_o        ( signalFromGeneratorB       ), //Modulation
     .dac_a_90out_o  ( signalFromGeneratorC       ), //OutofPhaseModulatio
-    .dac_clk_i      ( adc_clk                    ),  //Input 125Mz clock
-    .syncOutput     (MHzSync                    )
+    .dac_clk_i      ( adc_clk                    ), //Input 125Mz Clock
+    .syncOutput     ( MHzSync                    )  //Outputs at start of wave - to sync LIA with the wave generation each time. 
 );
 
-wire [14-1:0] outputFromLIA; 
 
 LockInAmplifier LIA
 (
-    .adcInputChannel1   ( adc_a                     ),
-    .dac_clk_i          ( adc_clk                   ),
-    .inPhase            ( signalFromGeneratorB      ),
-    .outPhase           ( signalFromGeneratorC      ),
-    .LIAOutput_O        ( outputFromLIA             )
+    .adcInputChannel1           ( adc_a                     ), //Input from channel A
+    .dac_clk_i                  ( adc_clk                   ), //Input 125Mz Clock
+    .inPhase                    ( signalFromGeneratorB      ), //In phase modulation
+    .outPhase                   ( signalFromGeneratorC      ), //OutOfPhase Modulation
+    .LIAOutput_InPhaseOutput    ( InPhaseLIAOutput          ), //LIA Output In Phase
+    .LIAOutput_OutPhaseOutput   ( OutPhaseLIAOutput         ), //LIA Output Out Of Phase
+    .mhzClockIn                 ( MHzSync                   ), //LIA Sync bit - Syncs with Signal generation to get consistent number of samples each time. 
+    .MiscRamp                   ( rampOutput                )  //Output Ramp Signal for Characterisation
 );
 
 

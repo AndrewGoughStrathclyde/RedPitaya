@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="LockInAmplifierTestBench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="LockInAmplifierTestBench" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="7690921450154fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="225"></NameColumnWidth>
+      <ValueColumnWidth column_width="94"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/LockInAmplifierTestBench/LIA/adcInputChannel1" type="array">
+      <obj_property name="ElementShortName">adcInputChannel1[13:0]</obj_property>
+      <obj_property name="ObjectShortName">adcInputChannel1[13:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="AnalogYRangeMin">174.255</obj_property>
+      <obj_property name="AnalogYRRangeMax">8363.26</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LockInAmplifierTestBench/LIA/inPhase" type="array">
+      <obj_property name="ElementShortName">inPhase[13:0]</obj_property>
+      <obj_property name="ObjectShortName">inPhase[13:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LockInAmplifierTestBench/LIA/outPhase" type="array">
+      <obj_property name="ElementShortName">outPhase[13:0]</obj_property>
+      <obj_property name="ObjectShortName">outPhase[13:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LockInAmplifierTestBench/LIA/demodSignalInPhase" type="array">
+      <obj_property name="ElementShortName">demodSignalInPhase[27:0]</obj_property>
+      <obj_property name="ObjectShortName">demodSignalInPhase[27:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">200</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_LINEAR</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LockInAmplifierTestBench/LIA/resultAccumulator" type="array">
+      <obj_property name="ElementShortName">resultAccumulator[63:0]</obj_property>
+      <obj_property name="ObjectShortName">resultAccumulator[63:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LockInAmplifierTestBench/LIA/outPhaseResultAccumulator" type="array">
+      <obj_property name="ElementShortName">outPhaseResultAccumulator[63:0]</obj_property>
+      <obj_property name="ObjectShortName">outPhaseResultAccumulator[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LockInAmplifierTestBench/LIA/InPhaseOutput" type="array">
+      <obj_property name="ElementShortName">InPhaseOutput[63:0]</obj_property>
+      <obj_property name="ObjectShortName">InPhaseOutput[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_FIXED</obj_property>
+      <obj_property name="AnalogYRangeMin">6.5227e+07</obj_property>
+      <obj_property name="AnalogYRRangeMax">6.57348e+07</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LockInAmplifierTestBench/LIA/OutPhaseOutput" type="array">
+      <obj_property name="ElementShortName">OutPhaseOutput[63:0]</obj_property>
+      <obj_property name="ObjectShortName">OutPhaseOutput[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_LINEAR</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LockInAmplifierTestBench/outputFromLIA" type="array">
+      <obj_property name="ElementShortName">outputFromLIA[13:0]</obj_property>
+      <obj_property name="ObjectShortName">outputFromLIA[13:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LockInAmplifierTestBench/miscRamp" type="array">
+      <obj_property name="ElementShortName">miscRamp[13:0]</obj_property>
+      <obj_property name="ObjectShortName">miscRamp[13:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+</wave_config>

@@ -194,40 +194,45 @@ always @(posedge adc_clk_i) begin
       adc_dec_cnt <= 17'h0 ;
       adc_dv      <=  1'b0 ;
    end
-   else begin
+   else begin                                           // Need to check out what adc_arm_do does
       if ((adc_dec_cnt >= set_dec) || adc_arm_do) begin // start again or arm
          adc_dec_cnt <= 17'h1                   ;
          adc_a_sum   <= $signed(adc_a_filt_out) ;
          adc_b_sum   <= $signed(adc_b_filt_out) ;
       end
       else begin
-         adc_dec_cnt <= adc_dec_cnt + 17'h1 ;
-         adc_a_sum   <= $signed(adc_a_sum) + $signed(adc_a_filt_out) ;
-         adc_b_sum   <= $signed(adc_b_sum) + $signed(adc_b_filt_out) ;
+         adc_dec_cnt <= adc_dec_cnt + 17'h1 ; // add 1 to counter
+         adc_a_sum   <= $signed(adc_a_sum) + $signed(adc_a_filt_out) ; // Add another decimation cycle adc_a_sum
+         adc_b_sum   <= $signed(adc_b_sum) + $signed(adc_b_filt_out) ; // Add another decimation cycle adc_b_sum
       end
 
-      adc_dv <= (adc_dec_cnt >= set_dec) ;
+      adc_dv <= (adc_dec_cnt >= set_dec) ; // Activates the writing to the BRAM buffer when the decimation is complete
 
         case (set_dec & {17{set_avg_en}})
-        17'h0:      begin   adc_a_dat <= {adc_a_filt_out,2'b00};    adc_b_dat <= {adc_b_filt_out,2'b00};    end
-        17'h1:      begin   adc_a_dat <= {adc_a_sum[ 0+:14],2'b00}; adc_b_dat <= {adc_b_sum[ 0+:14],2'b00}; end
-        17'h2:      begin   adc_a_dat <= {adc_a_sum[ 0+:15],1'b0};  adc_b_dat <= {adc_b_sum[ 0+:15],1'b0};  end
-        17'h4:      begin   adc_a_dat <=  adc_a_sum[ 0+:16];        adc_b_dat <=  adc_b_sum[ 0+:16];        end
-        17'h8:      begin   adc_a_dat <=  adc_a_sum[ 1+:16];        adc_b_dat <=  adc_b_sum[ 1+:16];        end
-        17'h10:     begin   adc_a_dat <=  adc_a_sum[ 2+:16];        adc_b_dat <=  adc_b_sum[ 2+:16];        end
-        17'h20:     begin   adc_a_dat <=  adc_a_sum[ 3+:16];        adc_b_dat <=  adc_b_sum[ 3+:16];        end
-        17'h40:     begin   adc_a_dat <=  adc_a_sum[ 4+:16];        adc_b_dat <=  adc_b_sum[ 4+:16];        end
-        17'h80:     begin   adc_a_dat <=  adc_a_sum[ 5+:16];        adc_b_dat <=  adc_b_sum[ 5+:16];        end
-        17'h100:    begin   adc_a_dat <=  adc_a_sum[ 6+:16];        adc_b_dat <=  adc_b_sum[ 6+:16];        end
-        17'h200:    begin   adc_a_dat <=  adc_a_sum[ 7+:16];        adc_b_dat <=  adc_b_sum[ 7+:16];        end
-        17'h400:    begin   adc_a_dat <=  adc_a_sum[ 8+:16];        adc_b_dat <=  adc_b_sum[ 8+:16];        end
-        17'h800:    begin   adc_a_dat <=  adc_a_sum[ 9+:16];        adc_b_dat <=  adc_b_sum[ 9+:16];        end
-        17'h1000:   begin   adc_a_dat <=  adc_a_sum[10+:16];        adc_b_dat <=  adc_b_sum[10+:16];        end
-        17'h2000:   begin   adc_a_dat <=  adc_a_sum[11+:16];        adc_b_dat <=  adc_b_sum[11+:16];        end
-        17'h4000:   begin   adc_a_dat <=  adc_a_sum[12+:16];        adc_b_dat <=  adc_b_sum[12+:16];        end
-        17'h8000:   begin   adc_a_dat <=  adc_a_sum[13+:16];        adc_b_dat <=  adc_b_sum[13+:16];        end
-        17'h10000:  begin   adc_a_dat <=  adc_a_sum[14+:16];        adc_b_dat <=  adc_b_sum[14+:16];        end
-        default:    begin   adc_a_dat <= {adc_a_sum[ 0+:14],2'b00}; adc_b_dat <= {adc_b_sum[ 0+:14],2'b00}; end
+        17'h0:      begin   adc_a_dat <= {adc_a_filt_out,2'b00};    adc_b_dat <= {adc_b_filt_out,2'b00};    end // unlimited
+        17'h1:      begin   adc_a_dat <= {adc_a_sum[ 0+:14],2'b00}; adc_b_dat <= {adc_b_sum[ 0+:14],2'b00}; end // decimation of 1
+        17'h2:      begin   adc_a_dat <= {adc_a_sum[ 0+:15],1'b0};  adc_b_dat <= {adc_b_sum[ 0+:15],1'b0};  end // decimation of 2
+        17'h4:      begin   adc_a_dat <=  adc_a_sum[ 0+:16];        adc_b_dat <=  adc_b_sum[ 0+:16];        end // decimation of 4
+        17'h8:      begin   adc_a_dat <=  adc_a_sum[ 1+:16];        adc_b_dat <=  adc_b_sum[ 1+:16];        end // decimation of 8
+        17'h10:     begin   adc_a_dat <=  adc_a_sum[ 2+:16];        adc_b_dat <=  adc_b_sum[ 2+:16];        end // decimation of 16
+        17'h20:     begin   adc_a_dat <=  adc_a_sum[ 3+:16];        adc_b_dat <=  adc_b_sum[ 3+:16];        end // decimation of 32
+        17'h40:     begin   adc_a_dat <=  adc_a_sum[ 4+:16];        adc_b_dat <=  adc_b_sum[ 4+:16];        end // decimation of 64 
+        17'b00000000001111101: begin
+        adc_a_dat <= (adc_a_sum[ 5+:16]+adc_a_sum[ 11+:16]+adc_a_sum[ 12+:16]);// This comes from a simplification of 1/125 in order to get the decimation to divide properly
+        // 125 Decimation should have already been achieved within the LIA - when using 125 should be able to just pipe the input to the BRAM output
+        adc_b_dat   <= $signed(adc_b_filt_out);
+        end                                                                                                 // decimation of 125
+        17'h80:     begin   adc_a_dat <=  adc_a_sum[ 5+:16];        adc_b_dat <=  adc_b_sum[ 5+:16];        end // decimation of 128
+        17'h100:    begin   adc_a_dat <=  adc_a_sum[ 6+:16];        adc_b_dat <=  adc_b_sum[ 6+:16];        end // decimation of 256
+        17'h200:    begin   adc_a_dat <=  adc_a_sum[ 7+:16];        adc_b_dat <=  adc_b_sum[ 7+:16];        end // decimation of 512
+        17'h400:    begin   adc_a_dat <=  adc_a_sum[ 8+:16];        adc_b_dat <=  adc_b_sum[ 8+:16];        end // decimation of 1024
+        17'h800:    begin   adc_a_dat <=  adc_a_sum[ 9+:16];        adc_b_dat <=  adc_b_sum[ 9+:16];        end // decimation of 2048
+        17'h1000:   begin   adc_a_dat <=  adc_a_sum[10+:16];        adc_b_dat <=  adc_b_sum[10+:16];        end // decimation of 4096
+        17'h2000:   begin   adc_a_dat <=  adc_a_sum[11+:16];        adc_b_dat <=  adc_b_sum[11+:16];        end // decimation of 8192
+        17'h4000:   begin   adc_a_dat <=  adc_a_sum[12+:16];        adc_b_dat <=  adc_b_sum[12+:16];        end // decimation of 16384
+        17'h8000:   begin   adc_a_dat <=  adc_a_sum[13+:16];        adc_b_dat <=  adc_b_sum[13+:16];        end // decimation of 32768
+        17'h10000:  begin   adc_a_dat <=  adc_a_sum[14+:16];        adc_b_dat <=  adc_b_sum[14+:16];        end // decimation of 65536
+        default:    begin   adc_a_dat <= {adc_a_sum[ 0+:14],2'b00}; adc_b_dat <= {adc_b_sum[ 0+:14],2'b00}; end // decimation of 2
         // TODO put some magical tricks in default case to decimate with non-power-of-two factors
         endcase
 

@@ -1,0 +1,114 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 12612
+License: Customer
+
+Current time: 	Tue Dec 11 11:08:47 GMT 2018
+Time zone: 	Greenwich Mean Time (Europe/London)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 6
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 87 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	djb12169
+User home directory: C:/Users/djb12169
+User working directory: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4
+User country: 	GB
+User language: 	en
+User locale: 	en_GB
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/djb12169/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/djb12169/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/djb12169/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/vivado.log
+Vivado journal file location: 	H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/vivado.jou
+Engine tmp dir: 	H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/.Xil/Vivado-12612-eee-cmp-52
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	152 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 520 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// [GUI Memory]: 16 MB (+13973kb) [00:00:05]
+// [Engine Memory]: 265 MB (+125909kb) [00:00:05]
+// [GUI Memory]: 20 MB (+3870kb) [00:00:10]
+// [GUI Memory]: 24 MB (+2690kb) [00:00:15]
+// [GUI Memory]: 29 MB (+4389kb) [00:00:20]
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 58 MB (+28964kb) [00:00:26]
+// [Engine Memory]: 486 MB (+218794kb) [00:00:26]
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: H:\PhD\Red Pitaya Fork\RedPitaya\FPGA\release1\fpga\vivado2015_4\red_pitaya.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// Tcl Message: open_project {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.xpr} 
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 83 MB (+22696kb) [00:00:31]
+// [Engine Memory]: 600 MB (+93729kb) [00:00:31]
+// [GUI Memory]: 90 MB (+2861kb) [00:00:32]
+// Tcl Message: open_project {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 629 MB. GUI used memory: 46 MB. Current time: 12/11/18 11:08:52 AM GMT
+// Project name: red_pitaya; location: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4; part: xc7z010clg400-1
+// [Engine Memory]: 632 MB (+2057kb) [00:00:34]
+// Tcl Message: open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 810.953 ; gain = 135.648 
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "impl_1 ; constrs_1 ; write_bitstream Complete! ; -3.1659529209136963 ; -70.67024993896484 ; 0.06737876683473587 ; 0.0 ; 0.0 ; 1.8054351806640625 ; 0 ; 2079 ; 1816 ; 16.5 ; 0 ; 11 ; Tue Dec 11 10:52:42 GMT 2018 ; 00:02:19 ; xc7z010clg400-1 ; Vivado Implementation Defaults", 1, "-3.1659529209136963", 4, false); // ax (O, ck)
+// PAPropertyPanels.initPanels (impl_1) elapsed time: 0.4s
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "impl_1 ; constrs_1 ; write_bitstream Complete! ; -3.1659529209136963 ; -70.67024993896484 ; 0.06737876683473587 ; 0.0 ; 0.0 ; 1.8054351806640625 ; 0 ; 2079 ; 1816 ; 16.5 ; 0 ; 11 ; Tue Dec 11 10:52:42 GMT 2018 ; 00:02:19 ; xc7z010clg400-1 ; Vivado Implementation Defaults", 1, "100", 3, false, false, false, false, true, false); // ax (O, ck) - Popup Trigger
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.v)]", 1); // B (D, ck)
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1481 ms. Increasing delay to 3000 ms.
