@@ -596,24 +596,26 @@ red_pitaya_asg i_asg
 wire [14-1:0] signalFromGeneratorA;
 wire [14-1:0] signalFromGeneratorB;
 wire [14-1:0] signalFromGeneratorC;
+wire          MHzSync;
 
 SignalGeneration sigGen
 (
     .dac_a_o        ( signalFromGeneratorA       ), //Carrier
     .dac_b_o        ( signalFromGeneratorB       ), //Modulation
     .dac_a_90out_o  ( signalFromGeneratorC       ), //OutofPhaseModulatio
-    .dac_clk_i      ( adc_clk                    )  //Input 125Mz clock
+    .dac_clk_i      ( adc_clk                    ),  //Input 125Mz clock
+    .syncOutput     (MHzSync                    )
 );
 
 wire [14-1:0] outputFromLIA; 
 
 LockInAmplifier LIA
 (
-    .adcInputChannel1   ( adc_a_i                   ),
+    .adcInputChannel1   ( adc_a                     ),
     .dac_clk_i          ( adc_clk                   ),
     .inPhase            ( signalFromGeneratorB      ),
     .outPhase           ( signalFromGeneratorC      ),
-    .LIAOutput_O          ( outputFromLIA             )
+    .LIAOutput_O        ( outputFromLIA             )
 );
 
 
@@ -670,8 +672,8 @@ wire  [ 15-1: 0] dac_b_sum       ;
 // signalFromGeneratorB = Modulation Wave
 // signalFromGeneratorC = Out of Phase Modulation Wave
 
-assign dac_a_sum = $signed(signalFromGeneratorB); // Output 1 
-assign dac_b_sum = $signed(signalFromGeneratorC); // Output 2 
+assign dac_a_sum = $signed(signalFromGeneratorA); // Output 1 
+assign dac_b_sum = $signed(signalFromGeneratorB); // Output 2 
 
 always @(*) begin
 

@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1543594407">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1544004288">
   <File Type="PA-TCL" Name="red_pitaya_top.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="red_pitaya_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="red_pitaya_top_reports.tcl"/>
   <File Type="RDS-RDS" Name="red_pitaya_top.vds"/>
   <File Type="RDS-UTIL" Name="red_pitaya_top_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="red_pitaya_top_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="red_pitaya_top.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="red_pitaya_top_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="red_pitaya_top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/system/system.bd">
@@ -196,10 +193,10 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2013"/>
     <Step Id="synth_design">
       <Option Id="FlattenHierarchy">1</Option>
+      <Option Id="ResourceSharing">2</Option>
       <Option Id="MaxClockBufferCount">16</Option>
       <Option Id="NoCombineLuts">1</Option>
       <Option Id="KeepEquivalentRegisters">1</Option>
-      <Option Id="ResourceSharing">2</Option>
     </Step>
   </Strategy>
 </GenRun>

@@ -12,15 +12,16 @@ source red_pitaya_top.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 288.426 ; gain = 42.824
 Command: synth_design -top red_pitaya_top -part xc7z010clg400-1 -flatten_hierarchy none -bufg 16 -keep_equivalent_registers -resource_sharing off -no_lc
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11880 
-WARNING: [Synth 8-992] outputFromLIA is already implicitly declared earlier [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:608]
+INFO: Helper process launched with PID 6164 
+WARNING: [Synth 8-992] outputFromLIA is already implicitly declared earlier [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:610]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 409.637 ; gain = 114.133
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 410.316 ; gain = 114.715
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'red_pitaya_top' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:78]
 	Parameter SYSCONF_ID bound to: -1048574 - type: integer 
@@ -598,11 +599,12 @@ INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [H:/PhD/Red Pit
 INFO: [Synth 8-6155] done synthesizing module 'bus_clk_bridge' (21#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/bus_clk_bridge.v:38]
 INFO: [Synth 8-6155] done synthesizing module 'red_pitaya_scope' (22#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v:59]
 INFO: [Synth 8-6157] synthesizing module 'SignalGeneration' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:23]
-WARNING: [Synth 8-6090] variable 'clkCounterB' is written by both blocking and non-blocking assignments, entire logic could be removed [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:683]
+WARNING: [Synth 8-6090] variable 'clkCounterB' is written by both blocking and non-blocking assignments, entire logic could be removed [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:685]
 INFO: [Synth 8-6155] done synthesizing module 'SignalGeneration' (23#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:23]
 INFO: [Synth 8-6157] synthesizing module 'LockInAmplifier' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:23]
+WARNING: [Synth 8-6014] Unused sequential element demodSignalInPhase_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'LockInAmplifier' (24#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:23]
-WARNING: [Synth 8-689] width (1) of port connection 'adcInputChannel1' does not match port width (14) of module 'LockInAmplifier' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:612]
+WARNING: [Synth 8-350] instance 'LIA' of module 'LockInAmplifier' requires 6 connections, but only 5 given [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:612]
 INFO: [Synth 8-6157] synthesizing module 'red_pitaya_pid' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid.v:52]
 	Parameter PSR bound to: 12 - type: integer 
 	Parameter ISR bound to: 18 - type: integer 
@@ -620,7 +622,6 @@ WARNING: [Synth 8-3848] Net dac_pwm_b in module/entity red_pitaya_top does not h
 WARNING: [Synth 8-3848] Net dac_pwm_c in module/entity red_pitaya_top does not have driver. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:409]
 WARNING: [Synth 8-3848] Net dac_pwm_d in module/entity red_pitaya_top does not have driver. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:410]
 WARNING: [Synth 8-3848] Net trig_asg_out in module/entity red_pitaya_top does not have driver. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:513]
-WARNING: [Synth 8-3848] Net adc_a_i in module/entity red_pitaya_top does not have driver. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:612]
 INFO: [Synth 8-6155] done synthesizing module 'red_pitaya_top' (27#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:78]
 WARNING: [Synth 8-3917] design red_pitaya_top has port adc_clk_o[1] driven by constant 1
 WARNING: [Synth 8-3917] design red_pitaya_top has port adc_clk_o[0] driven by constant 0
@@ -629,34 +630,6 @@ WARNING: [Synth 8-3331] design bus_clk_bridge has unconnected port sys_sel_i[3]
 WARNING: [Synth 8-3331] design bus_clk_bridge has unconnected port sys_sel_i[2]
 WARNING: [Synth 8-3331] design bus_clk_bridge has unconnected port sys_sel_i[1]
 WARNING: [Synth 8-3331] design bus_clk_bridge has unconnected port sys_sel_i[0]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port adcInputChannel1[13]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port adcInputChannel1[12]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port adcInputChannel1[11]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port adcInputChannel1[10]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port adcInputChannel1[9]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port adcInputChannel1[8]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port adcInputChannel1[7]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port adcInputChannel1[6]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port adcInputChannel1[5]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port adcInputChannel1[4]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port adcInputChannel1[3]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port adcInputChannel1[2]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port adcInputChannel1[1]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port adcInputChannel1[0]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port inPhase[13]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port inPhase[12]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port inPhase[11]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port inPhase[10]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port inPhase[9]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port inPhase[8]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port inPhase[7]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port inPhase[6]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port inPhase[5]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port inPhase[4]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port inPhase[3]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port inPhase[2]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port inPhase[1]
-WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port inPhase[0]
 WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port outPhase[13]
 WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port outPhase[12]
 WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port outPhase[11]
@@ -671,6 +644,7 @@ WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port outPhase[3]
 WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port outPhase[2]
 WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port outPhase[1]
 WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port outPhase[0]
+WARNING: [Synth 8-3331] design LockInAmplifier has unconnected port mhzClockIn
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In16[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In17[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In18[0]
@@ -725,9 +699,36 @@ WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has un
 WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port S_AXI_HP2_AWSIZE[2]
 WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port S_AXI_HP3_ARSIZE[2]
 WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port S_AXI_HP3_AWSIZE[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FCLK_CLKTRIG3_N
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FCLK_CLKTRIG2_N
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FCLK_CLKTRIG1_N
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FCLK_CLKTRIG0_N
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[31]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[30]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[29]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[28]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[27]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[26]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[25]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[24]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[23]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[22]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[21]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[20]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[19]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[18]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[17]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[16]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[15]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[14]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[13]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[12]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[11]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[10]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[9]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 477.387 ; gain = 181.883
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 481.297 ; gain = 185.695
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -838,10 +839,10 @@ WARNING: [Synth 8-3295] tying undriven pin i_scope:trig_asg_i to constant 0 [H:/
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 477.387 ; gain = 181.883
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 481.297 ; gain = 185.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 477.387 ; gain = 181.883
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 481.297 ; gain = 185.695
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -870,16 +871,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 831.883 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 836.348 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 831.883 ; gain = 536.379
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 836.348 ; gain = 540.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 831.883 ; gain = 536.379
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 836.348 ; gain = 540.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -889,7 +890,7 @@ Applied set_property DONT_TOUCH = true for i_ps/system_i/system_i/processing_sys
 Applied set_property DONT_TOUCH = true for i_ps/system_i/system_i/xlconcat_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for i_ps/system_i/system_i/processing_system7_0/inst. (constraint file  {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/dont_touch.xdc}, line 18).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 831.883 ; gain = 536.379
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 836.348 ; gain = 540.746
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "dac_pwm_bcnt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "dac_pwm_va0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -927,9 +928,10 @@ INFO: [Synth 8-5546] ROM "ddr_a_end" won't be mapped to RAM because it is too sp
 INFO: [Synth 8-5546] ROM "ddr_b_base" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ddr_b_end" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ddr_control" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element clkCounterB_reg_rep was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:173]
-WARNING: [Synth 8-6014] Unused sequential element clkCounterA_reg_rep was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:45]
-WARNING: [Synth 8-6014] Unused sequential element clkCounterA_reg_rep was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:45]
+WARNING: [Synth 8-6014] Unused sequential element clkCounterB_reg_rep was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:175]
+WARNING: [Synth 8-6014] Unused sequential element clkCounterA_reg_rep was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:46]
+WARNING: [Synth 8-6014] Unused sequential element clkCounterA_reg_rep was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:46]
+INFO: [Synth 8-5546] ROM "resultAccumulator" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-6014] Unused sequential element ki_mult_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:127]
 WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
 WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
@@ -953,7 +955,7 @@ INFO: [Synth 8-5546] ROM "set_22_kd" won't be mapped to RAM because it is too sp
 INFO: [Synth 8-5546] ROM "sysconf_cs" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "sysconf_rdata" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 831.883 ; gain = 536.379
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 836.348 ; gain = 540.746
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -966,6 +968,7 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     64 Bit       Adders := 1     
 	   3 Input     33 Bit       Adders := 6     
 	   2 Input     33 Bit       Adders := 2     
 	   2 Input     32 Bit       Adders := 3     
@@ -973,11 +976,11 @@ Detailed RTL Component Info :
 	   3 Input     20 Bit       Adders := 4     
 	   2 Input     17 Bit       Adders := 1     
 	   2 Input     15 Bit       Adders := 4     
-	   3 Input     14 Bit       Adders := 2     
+	   3 Input     14 Bit       Adders := 3     
 	   2 Input     14 Bit       Adders := 2     
 	   2 Input     11 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 2     
-	   2 Input      8 Bit       Adders := 5     
+	   2 Input      8 Bit       Adders := 6     
 	   2 Input      7 Bit       Adders := 2     
 	   2 Input      6 Bit       Adders := 9     
 	   2 Input      4 Bit       Adders := 1     
@@ -1000,13 +1003,13 @@ Detailed RTL Component Info :
 	               12 Bit    Registers := 2     
 	               11 Bit    Registers := 1     
 	                9 Bit    Registers := 3     
-	                8 Bit    Registers := 10    
+	                8 Bit    Registers := 11    
 	                7 Bit    Registers := 3     
 	                6 Bit    Registers := 11    
 	                4 Bit    Registers := 7     
 	                3 Bit    Registers := 4     
 	                2 Bit    Registers := 16    
-	                1 Bit    Registers := 46    
+	                1 Bit    Registers := 47    
 +---RAMs : 
 	             224K Bit         RAMs := 2     
 +---ROMs : 
@@ -1022,7 +1025,7 @@ Detailed RTL Component Info :
 	  18 Input     16 Bit        Muxes := 2     
 	   2 Input     14 Bit        Muxes := 24    
 	   2 Input      9 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 3     
 	   9 Input      6 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 45    
 	   5 Input      6 Bit        Muxes := 1     
@@ -1035,10 +1038,10 @@ Detailed RTL Component Info :
 	   5 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
 	   9 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 70    
+	   2 Input      1 Bit        Muxes := 71    
 	  33 Input      1 Bit        Muxes := 1     
-	 500 Input      1 Bit        Muxes := 1     
-	 125 Input      1 Bit        Muxes := 1     
+	 500 Input      1 Bit        Muxes := 2     
+	 125 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -1185,15 +1188,24 @@ Detailed RTL Component Info :
 	               14 Bit    Registers := 3     
 	                9 Bit    Registers := 2     
 	                7 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
 +---ROMs : 
 	                              ROMs := 3     
 +---Muxes : 
-	 500 Input      1 Bit        Muxes := 1     
-	 125 Input      1 Bit        Muxes := 1     
+	 500 Input      1 Bit        Muxes := 2     
+	 125 Input      1 Bit        Muxes := 2     
 Module LockInAmplifier 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     14 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
 	               14 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 Module red_pitaya_pid_block 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1330,9 +1342,12 @@ INFO: [Synth 8-5546] ROM "set_b_filt_aa" won't be mapped to RAM because it is to
 INFO: [Synth 8-5546] ROM "set_b_filt_bb" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "set_b_filt_kk" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "set_b_filt_pp" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element clkCounterB_reg_rep was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:173]
-WARNING: [Synth 8-6014] Unused sequential element clkCounterA_reg_rep was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:45]
-WARNING: [Synth 8-6014] Unused sequential element clkCounterA_reg_rep was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:45]
+WARNING: [Synth 8-6014] Unused sequential element clkCounterB_reg_rep was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:175]
+WARNING: [Synth 8-6014] Unused sequential element clkCounterA_reg_rep was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:46]
+WARNING: [Synth 8-6014] Unused sequential element clkCounterA_reg_rep was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:46]
+INFO: [Synth 8-5546] ROM "resultAccumulator" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP resultAccumulator1, operation Mode is: A*B.
+DSP Report: operator resultAccumulator1 is absorbed into DSP resultAccumulator1.
 WARNING: [Synth 8-6014] Unused sequential element ki_mult_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:127]
 WARNING: [Synth 8-6014] Unused sequential element int_reg_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:128]
 WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
@@ -1445,20 +1460,6 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (red_pitay
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (red_pitaya_dfilt1:/\r01_reg_reg[15] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (red_pitaya_dfilt1:/\r01_reg_reg[16] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (red_pitaya_dfilt1:/\r01_reg_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (LIA/\LIAOutput_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (LIA/\LIAOutput_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (LIA/\LIAOutput_reg[2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (LIA/\LIAOutput_reg[3] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (LIA/\LIAOutput_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (LIA/\LIAOutput_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (LIA/\LIAOutput_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (LIA/\LIAOutput_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (LIA/\LIAOutput_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (LIA/\LIAOutput_reg[9] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (LIA/\LIAOutput_reg[10] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (LIA/\LIAOutput_reg[11] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (LIA/\LIAOutput_reg[12] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (LIA/\LIAOutput_reg[13] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_va_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_va_reg[5] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_va_reg[4] )
@@ -1523,6 +1524,20 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_vd_r_reg[3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_vd_r_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_vd_r_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_vd_r_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_vd_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_ba_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_bb_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_bc_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_bd_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_ba_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_bb_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_bc_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_bd_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_ba_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_bb_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_bc_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_analog/\dac_pwm_bd_reg[11] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3332] Sequential element (axi_bresp_o_reg[0]) is unused and will be removed from module axi_slave.
 WARNING: [Synth 8-3332] Sequential element (axi_rresp_o_reg[0]) is unused and will be removed from module axi_slave.
@@ -1626,7 +1641,7 @@ WARNING: [Synth 8-3332] Sequential element (dac_pwm_vc_r_reg[7]) is unused and w
 WARNING: [Synth 8-3332] Sequential element (dac_pwm_vc_r_reg[6]) is unused and will be removed from module red_pitaya_analog.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 831.883 ; gain = 536.379
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 836.348 ; gain = 540.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1639,7 +1654,6 @@ ROM:
 |SignalGeneration | clkCounterB_reg_rep | 512x14        | Block RAM      | 
 |SignalGeneration | clkCounterA_reg_rep | 128x14        | Block RAM      | 
 |SignalGeneration | clkCounterA_reg_rep | 128x14        | Block RAM      | 
-|SignalGeneration | clkCounterB_reg_rep | 512x14        | Block RAM      | 
 |SignalGeneration | clkCounterA_reg_rep | 128x14        | Block RAM      | 
 |SignalGeneration | clkCounterA_reg_rep | 128x14        | Block RAM      | 
 +-----------------+---------------------+---------------+----------------+
@@ -1669,6 +1683,7 @@ DSP: Preliminary Mapping  Report (see note below)
 |red_pitaya_dfilt1    | PCIN+A2:B2  | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
 |red_pitaya_dfilt1    | A2*B2       | 25     | 15     | -      | -      | 40     | 1    | 1    | -    | -    | -     | 0    | 0    | 
 |red_pitaya_dfilt1    | A2*BCIN''   | 25     | 15     | -      | -      | 40     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|LockInAmplifier      | A*B         | 14     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |red_pitaya_pid_block | C'+(A2*B)'  | 15     | 14     | 32     | -      | 33     | 1    | 0    | 1    | -    | -     | 1    | 0    | 
 |red_pitaya_pid_block | A2*B        | 15     | 14     | -      | -      | 29     | 1    | 0    | -    | -    | -     | 0    | 0    | 
 |red_pitaya_pid_block | A2*B        | 15     | 14     | -      | -      | 29     | 1    | 0    | -    | -    | -     | 0    | 0    | 
@@ -1701,7 +1716,7 @@ INFO: [Synth 8-4480] The timing for the instance i_scope/i_91/adc_b_buf_reg_3 (i
 INFO: [Synth 8-4480] The timing for the instance i_scope/i_91/adc_b_buf_reg_4 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance i_scope/i_91/adc_b_buf_reg_5 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance i_scope/i_91/adc_b_buf_reg_6 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance sigGen/i_0/clkCounterA_reg_rep (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance sigGen/i_0/clkCounterB_reg_rep (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance sigGen/i_1/clkCounterA_reg_rep (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 
 Report RTL Partitions: 
@@ -1713,13 +1728,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:55 . Memory (MB): peak = 1013.344 ; gain = 717.840
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:58 . Memory (MB): peak = 1030.691 ; gain = 735.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 1037.195 ; gain = 741.691
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:59 . Memory (MB): peak = 1069.227 ; gain = 773.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1760,7 +1775,7 @@ INFO: [Synth 8-4480] The timing for the instance i_scope/adc_b_buf_reg_4 (implem
 INFO: [Synth 8-4480] The timing for the instance i_scope/adc_b_buf_reg_5 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance i_scope/adc_b_buf_reg_6 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:59 . Memory (MB): peak = 1073.992 ; gain = 778.488
+Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:01:02 . Memory (MB): peak = 1090.305 ; gain = 794.703
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1778,7 +1793,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:01:00 . Memory (MB): peak = 1073.992 ; gain = 778.488
+Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:01:03 . Memory (MB): peak = 1090.305 ; gain = 794.703
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1791,7 +1806,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:01:00 . Memory (MB): peak = 1073.992 ; gain = 778.488
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:01:03 . Memory (MB): peak = 1090.305 ; gain = 794.703
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1803,7 +1818,7 @@ Report RTL Partitions:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:01:00 . Memory (MB): peak = 1073.992 ; gain = 778.488
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:01:03 . Memory (MB): peak = 1090.305 ; gain = 794.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1821,38 +1836,39 @@ Report Cell Usage:
 +------+-----------+------+
 |1     |BIBUF      |   130|
 |2     |BUFG       |    14|
-|3     |CARRY4     |   155|
+|3     |CARRY4     |   174|
 |4     |DSP48E1    |     2|
 |5     |DSP48E1_1  |     4|
 |6     |DSP48E1_2  |     2|
 |7     |DSP48E1_3  |     2|
-|8     |LUT1       |   544|
-|9     |LUT2       |   231|
-|10    |LUT3       |   190|
-|11    |LUT4       |   516|
-|12    |LUT5       |   408|
-|13    |LUT6       |   592|
-|14    |MUXF7      |    42|
-|15    |ODDR       |    18|
-|16    |PLLE2_ADV  |     1|
-|17    |PS7        |     1|
-|18    |RAMB18E1_2 |     1|
-|19    |RAMB18E1_3 |     1|
-|20    |RAMB36E1   |     2|
-|21    |RAMB36E1_1 |    14|
-|22    |FDRE       |  1666|
-|23    |FDSE       |    70|
-|24    |IBUF       |    14|
-|25    |IBUFDS     |     1|
-|26    |OBUF       |    25|
-|27    |OBUFT      |     8|
+|8     |DSP48E1_4  |     1|
+|9     |LUT1       |   536|
+|10    |LUT2       |   307|
+|11    |LUT3       |   207|
+|12    |LUT4       |   520|
+|13    |LUT5       |   414|
+|14    |LUT6       |   613|
+|15    |MUXF7      |    42|
+|16    |ODDR       |    18|
+|17    |PLLE2_ADV  |     1|
+|18    |PS7        |     1|
+|19    |RAMB18E1_2 |     1|
+|20    |RAMB18E1_3 |     1|
+|21    |RAMB36E1   |     2|
+|22    |RAMB36E1_1 |    14|
+|23    |FDRE       |  1733|
+|24    |FDSE       |    70|
+|25    |IBUF       |    14|
+|26    |IBUFDS     |     1|
+|27    |OBUF       |    25|
+|28    |OBUFT      |     8|
 +------+-----------+------+
 
 Report Instance Areas: 
 +------+-----------------------------+-------------------------------------------+------+
 |      |Instance                     |Module                                     |Cells |
 +------+-----------------------------+-------------------------------------------+------+
-|1     |top                          |                                           |  4654|
+|1     |top                          |                                           |  4857|
 |2     |  i_ps                       |red_pitaya_ps                              |  1243|
 |3     |    i_hp0_dmaster            |axi_dump2ddr_master                        |   523|
 |4     |    i_gp0_slave              |axi_slave                                  |   229|
@@ -1862,24 +1878,25 @@ Report Instance Areas:
 |8     |          inst               |processing_system7_v5_5_processing_system7 |   487|
 |9     |        xlconcat_0           |system_xlconcat_0_0                        |     0|
 |10    |  i_analog                   |red_pitaya_analog                          |   167|
-|11    |  i_scope                    |red_pitaya_scope                           |  2717|
+|11    |  i_scope                    |red_pitaya_scope                           |  2734|
 |12    |    i_dfilt1_cha             |red_pitaya_dfilt1__1                       |   188|
-|13    |    i_dfilt1_chb             |red_pitaya_dfilt1                          |   171|
+|13    |    i_dfilt1_chb             |red_pitaya_dfilt1                          |   188|
 |14    |    adc_a_buffer             |BRAM_SDP_MACRO__1                          |     1|
 |15    |    adc_b_buffer             |BRAM_SDP_MACRO                             |     1|
 |16    |    i_bridge_scope           |bus_clk_bridge__1                          |    72|
-|17    |  sigGen                     |SignalGeneration                           |    26|
-|18    |  i_pid                      |red_pitaya_pid                             |   397|
-|19    |    i_bridge_pid             |bus_clk_bridge                             |    50|
+|17    |  sigGen                     |SignalGeneration                           |    50|
+|18    |  LIA                        |LockInAmplifier                            |   162|
+|19    |  i_pid                      |red_pitaya_pid                             |   397|
+|20    |    i_bridge_pid             |bus_clk_bridge                             |    50|
 +------+-----------------------------+-------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:01:00 . Memory (MB): peak = 1073.992 ; gain = 778.488
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:01:03 . Memory (MB): peak = 1090.305 ; gain = 794.703
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 781 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:50 . Memory (MB): peak = 1073.992 ; gain = 423.992
-Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:01:00 . Memory (MB): peak = 1073.992 ; gain = 778.488
+Synthesis finished with 0 errors, 0 critical warnings and 724 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:53 . Memory (MB): peak = 1090.305 ; gain = 439.652
+Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:01:04 . Memory (MB): peak = 1090.305 ; gain = 794.703
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 259 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 279 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -1887,11 +1904,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-307 Infos, 382 Warnings, 0 Critical Warnings and 0 Errors encountered.
+309 Infos, 382 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:01:04 . Memory (MB): peak = 1073.992 ; gain = 785.664
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:08 . Memory (MB): peak = 1090.305 ; gain = 801.879
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/red_pitaya_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file red_pitaya_top_utilization_synth.rpt -pb red_pitaya_top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1073.992 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Nov 30 16:14:44 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 1090.305 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  5 10:06:16 2018...

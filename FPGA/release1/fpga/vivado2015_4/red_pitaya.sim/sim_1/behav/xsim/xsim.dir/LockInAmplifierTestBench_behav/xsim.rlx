@@ -1,0 +1,12 @@
+
+{ 
+    crc :  2465016109339427445  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl" , 
+    buildDate : "Jun 14 2018" , 
+    buildTime : "20:41:02" , 
+    linkCmd : "C:\\Xilinx\\Vivado\\2018.2\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/LockInAmplifierTestBench_behav/xsimk.exe\"   \"xsim.dir/LockInAmplifierTestBench_behav/obj/xsim_0.win64.obj\" \"xsim.dir/LockInAmplifierTestBench_behav/obj/xsim_1.win64.obj\" \"C:\\Xilinx\\Vivado\\2018.2\\lib\\win64.o\\\\librdi_simulator_kernel.dll\"  \"C:\\Xilinx\\Vivado\\2018.2\\lib\\win64.o\\\\librdi_simbridge_kernel.dll\"" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

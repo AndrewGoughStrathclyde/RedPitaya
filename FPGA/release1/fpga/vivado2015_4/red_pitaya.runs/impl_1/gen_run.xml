@@ -1,56 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1543594407">
-  <File Type="BITSTR-BMM" Name="red_pitaya_top_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="red_pitaya_top_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="red_pitaya_top_timing_summary_init.rpt"/>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1544004289">
   <File Type="ROUTE-PWR" Name="red_pitaya_top_power_routed.rpt"/>
   <File Type="PA-TCL" Name="red_pitaya_top.tcl"/>
-  <File Type="OPT-TIMING" Name="red_pitaya_top_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="red_pitaya_top_opt.dcp"/>
+  <File Type="BITSTR-BMM" Name="red_pitaya_top_bd.bmm"/>
   <File Type="ROUTE-PWR-SUM" Name="red_pitaya_top_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="red_pitaya_top_reports.tcl"/>
+  <File Type="OPT-DCP" Name="red_pitaya_top_opt.dcp"/>
   <File Type="OPT-DRC" Name="red_pitaya_top_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="red_pitaya_top.hwdef"/>
   <File Type="PWROPT-DCP" Name="red_pitaya_top_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="red_pitaya_top_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="red_pitaya_top_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="red_pitaya_top_placed.dcp"/>
   <File Type="PLACE-IO" Name="red_pitaya_top_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="red_pitaya_top_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="red_pitaya_top_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="red_pitaya_top_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="red_pitaya_top_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="red_pitaya_top_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="red_pitaya_top_incremental_reuse_pre_placed.rpt"/>
   <File Type="BG-BGN" Name="red_pitaya_top.bgn"/>
-  <File Type="PLACE-TIMING" Name="red_pitaya_top_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="red_pitaya_top_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="red_pitaya_top.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="red_pitaya_top_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="red_pitaya_top_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="red_pitaya_top_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="red_pitaya_top.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="red_pitaya_top_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="red_pitaya_top_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="red_pitaya_top_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="red_pitaya_top_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="red_pitaya_top_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="red_pitaya_top_drc_routed.pb"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="red_pitaya_top.ltx"/>
   <File Type="ROUTE-DRC-RPX" Name="red_pitaya_top_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="red_pitaya_top.mmi"/>
+  <File Type="BITSTR-LTX" Name="red_pitaya_top.ltx"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="red_pitaya_top_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="red_pitaya_top.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="red_pitaya_top_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-SYSDEF" Name="red_pitaya_top.sysdef"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="red_pitaya_top_methodology_drc_routed.pb"/>
+  <File Type="BITSTR-SYSDEF" Name="red_pitaya_top.sysdef"/>
   <File Type="ROUTE-PWR-RPX" Name="red_pitaya_top_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="red_pitaya_top_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="red_pitaya_top_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="red_pitaya_top_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="red_pitaya_top_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="red_pitaya_top_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="red_pitaya_top_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="red_pitaya_top_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="red_pitaya_top_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="red_pitaya_top_bus_skew_routed.pb"/>
@@ -62,8 +49,8 @@
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="red_pitaya_top_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="red_pitaya_top_bus_skew_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="red_pitaya_top_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="red_pitaya_top.bit"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="red_pitaya_top_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="red_pitaya_top.bit"/>
   <File Type="BITSTR-RBT" Name="red_pitaya_top.rbt"/>
   <File Type="BITSTR-NKY" Name="red_pitaya_top.nky"/>
   <File Type="BG-DRC" Name="red_pitaya_top.drc"/>
