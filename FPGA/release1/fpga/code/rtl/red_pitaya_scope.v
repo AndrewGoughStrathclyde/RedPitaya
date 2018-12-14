@@ -232,7 +232,7 @@ always @(posedge adc_clk_i) begin
         17'h4000:   begin   adc_a_dat <=  adc_a_sum[12+:16];        adc_b_dat <=  adc_b_sum[12+:16];        end // decimation of 16384
         17'h8000:   begin   adc_a_dat <=  adc_a_sum[13+:16];        adc_b_dat <=  adc_b_sum[13+:16];        end // decimation of 32768
         17'h10000:  begin   adc_a_dat <=  adc_a_sum[14+:16];        adc_b_dat <=  adc_b_sum[14+:16];        end // decimation of 65536
-        default:    begin   adc_a_dat <= {adc_a_sum[ 0+:14],2'b00}; adc_b_dat <= {adc_b_sum[ 0+:14],2'b00}; end // decimation of 2
+        default:    begin   adc_a_dat <= {adc_a_sum[ 0+:14],2'b00}; adc_b_dat <= {adc_b_sum[ 0+:14],2'b00}; end // decimation of 1
         // TODO put some magical tricks in default case to decimate with non-power-of-two factors
         endcase
 

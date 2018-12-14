@@ -1,0 +1,9 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [VRFC 10-2458] undeclared symbol outputFromLIAOutOfPhase, assumed default net type wire [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+INFO: [VRFC 10-2263] Analyzing Verilog file "H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

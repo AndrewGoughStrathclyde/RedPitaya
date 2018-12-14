@@ -102,7 +102,7 @@ int scope_init(struct scope_parameter *param, option_fields_t *options)
 	*(unsigned long *)(param->mapped_io + 0x14) = param->decimation;
 	if (param->decimation)
 		*(unsigned long *)(param->mapped_io + 0x28) = 1;
-
+        fprintf(stderr,"Decimation: %d\n",param->decimation);  
 	/* set up filters
 	 * SCOPE_a_filt_aa		0x00000030UL
 	 * SCOPE_a_filt_bb		0x00000034UL

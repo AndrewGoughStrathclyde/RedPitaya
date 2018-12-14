@@ -12,3 +12,164 @@
 start_gui
 open_project {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.xpr}
 update_compile_order -fileset sources_1
+open_run impl_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+launch_simulation
+open_project C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+current_project red_pitaya
+current_project red_pitaya(2)
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 3
+wait_on_run impl_1
+refresh_design
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+refresh_design
+open_hw
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+current_project red_pitaya
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+refresh_design
+report_ip_status -name ip_status 
+set_property flow {Vivado Synthesis 2018} [get_runs synth_1]
+create_run synth_2 -flow {Vivado Synthesis 2018} -strategy {Vivado Synthesis Defaults} -report_strategy {Vivado Synthesis Default Reports}
+current_run [get_runs synth_2]
+set_property STEPS.SYNTH_DESIGN.ARGS.FLATTEN_HIERARCHY none [get_runs synth_2]
+set_property STEPS.SYNTH_DESIGN.ARGS.BUFG 16 [get_runs synth_2]
+set_property STEPS.SYNTH_DESIGN.ARGS.RETIMING true [get_runs synth_2]
+set_property STEPS.SYNTH_DESIGN.ARGS.KEEP_EQUIVALENT_REGISTERS true [get_runs synth_2]
+set_property STEPS.SYNTH_DESIGN.ARGS.RESOURCE_SHARING off [get_runs synth_2]
+set_property STEPS.SYNTH_DESIGN.ARGS.NO_LC true [get_runs synth_2]
+update_ip_catalog
+update_ip_catalog
+launch_runs impl_2 -to_step write_bitstream -jobs 3
+wait_on_run impl_2
+reset_run impl_2 -prev_step 
+launch_runs impl_2 -to_step write_bitstream -jobs 3
+wait_on_run impl_2
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 3
+wait_on_run impl_2
+current_project red_pitaya(2)
+reset_run synth_1
+launch_runs synth_1 -jobs 3
+wait_on_run synth_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+save_wave_config {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg}
+current_project red_pitaya
+current_project red_pitaya(2)
+save_wave_config {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg}
+current_project red_pitaya
+current_project red_pitaya(2)
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+current_wave_config {LockInAmplifierTestBench_behav.wcfg}
+add_wave {{/LockInAmplifierTestBench/LIA/internalCombinedOutput}} 
+save_wave_config {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+current_project red_pitaya
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 3
+wait_on_run impl_2

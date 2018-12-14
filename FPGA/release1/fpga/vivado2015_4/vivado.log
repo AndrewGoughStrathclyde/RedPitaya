@@ -19,3 +19,1811 @@ INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
 open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 810.953 ; gain = 135.648
 update_compile_order -fileset sources_1
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 298 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.638 . Memory (MB): peak = 1652.535 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.639 . Memory (MB): peak = 1652.535 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:26 ; elapsed = 00:00:24 . Memory (MB): peak = 1753.035 ; gain = 924.297
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [VRFC 10-2458] undeclared symbol outputFromLIAOutOfPhase, assumed default net type wire [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+INFO: [VRFC 10-2263] Analyzing Verilog file "H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 14 for port LIAOutput_OutPhaseOutput [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source H:/PhD/Red -notrace
+invalid command name "%"
+    while executing
+"% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+    (file "H:/PhD/Red" line 1)
+INFO: [Common 17-206] Exiting Webtalk at Tue Dec 11 11:38:06 2018...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {{H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+FATAL_ERROR: PrivateChannel: Error creating client socket.
+ERROR: [Simtcl 6-50] Simulation engine failed to start: Simulation exited with status code 4.
+Please see the Tcl Console or the Messages for details.
+
+ERROR: [USF-XSim-62] 'simulate' step failed with errors. Please check the Tcl console or log files for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1940.828 ; gain = 10.027
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+open_project C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [VRFC 10-2458] undeclared symbol outputFromLIAOutOfPhase, assumed default net type wire [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 14 for port LIAOutput_OutPhaseOutput [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim/xsim.dir/LockInAmplifierTestBench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim/xsim.dir/LockInAmplifierTestBench_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Dec 11 11:39:40 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:24 . Memory (MB): peak = 55.246 ; gain = 1.176
+INFO: [Common 17-206] Exiting Webtalk at Tue Dec 11 11:39:40 2018...
+run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:00:27 . Memory (MB): peak = 1988.191 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '26' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2085.176 ; gain = 88.676
+xsim: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2085.176 ; gain = 96.984
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:13 ; elapsed = 00:00:36 . Memory (MB): peak = 2085.176 ; gain = 103.969
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [VRFC 10-2458] undeclared symbol outputFromLIAOutOfPhase, assumed default net type wire [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 14 for port LIAOutput_OutPhaseOutput [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2085.176 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2085.176 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [VRFC 10-2458] undeclared symbol outputFromLIAOutOfPhase, assumed default net type wire [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 14 for port LIAOutput_OutPhaseOutput [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:73]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2085.176 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [VRFC 10-2458] undeclared symbol outputFromLIAOutOfPhase, assumed default net type wire [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 14 for port LIAOutput_OutPhaseOutput [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2090.082 ; gain = 4.906
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2090.082 ; gain = 4.906
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2090.082 ; gain = 4.906
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [VRFC 10-2458] undeclared symbol outputFromLIAOutOfPhase, assumed default net type wire [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 14 for port LIAOutput_OutPhaseOutput [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+WARNING: [VRFC 10-597] element index 64 into resultAccumulator is out of bounds [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:73]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2093.602 ; gain = 3.520
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2093.602 ; gain = 3.520
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2093.602 ; gain = 3.520
+current_project red_pitaya
+current_project red_pitaya(2)
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [VRFC 10-2458] undeclared symbol outputFromLIAOutOfPhase, assumed default net type wire [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 14 for port LIAOutput_OutPhaseOutput [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+WARNING: [VRFC 10-597] element index 64 into resultAccumulator is out of bounds [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:73]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2095.629 ; gain = 2.027
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 2095.629 ; gain = 2.027
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [VRFC 10-2458] undeclared symbol outputFromLIAOutOfPhase, assumed default net type wire [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 14 for port LIAOutput_OutPhaseOutput [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+WARNING: [VRFC 10-597] element index 64 into resultAccumulator is out of bounds [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:73]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2099.273 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 2099.273 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [VRFC 10-2458] undeclared symbol outputFromLIAOutOfPhase, assumed default net type wire [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 14 for port LIAOutput_OutPhaseOutput [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2102.617 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 2102.617 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Tue Dec 11 11:56:38 2018] Launched synth_1...
+Run output will be captured here: C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/runme.log
+[Tue Dec 11 11:56:38 2018] Launched impl_1...
+Run output will be captured here: C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [VRFC 10-2458] undeclared symbol outputFromLIAOutOfPhase, assumed default net type wire [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 14 for port LIAOutput_OutPhaseOutput [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+xsim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2112.504 ; gain = 9.887
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 2112.504 ; gain = 9.887
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Wed Dec 12 10:45:55 2018] Launched synth_1...
+Run output will be captured here: C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/runme.log
+[Wed Dec 12 10:45:55 2018] Launched impl_1...
+Run output will be captured here: C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 296 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.848 . Memory (MB): peak = 2224.789 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.850 . Memory (MB): peak = 2224.789 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1
+
+launch_runs impl_1 -jobs 3
+[Wed Dec 12 10:54:41 2018] Launched synth_1...
+Run output will be captured here: C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/runme.log
+[Wed Dec 12 10:54:41 2018] Launched impl_1...
+Run output will be captured here: C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/impl_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 296 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.679 . Memory (MB): peak = 2310.492 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.680 . Memory (MB): peak = 2310.492 ; gain = 0.000
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2310.492 ; gain = 12.395
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [VRFC 10-2458] undeclared symbol outputFromLIAOutOfPhase, assumed default net type wire [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 14 for port LIAOutput_OutPhaseOutput [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2385.383 ; gain = 56.098
+xsim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2385.383 ; gain = 56.098
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2385.383 ; gain = 56.098
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:26 . Memory (MB): peak = 2387.973 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2387.973 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2506.742 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 2506.742 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2507.363 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 2507.363 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Wed Dec 12 11:25:58 2018] Launched synth_1...
+Run output will be captured here: C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/runme.log
+[Wed Dec 12 11:25:58 2018] Launched impl_1...
+Run output will be captured here: C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim/xsim.dir/LockInAmplifierTestBench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim/xsim.dir/LockInAmplifierTestBench_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Dec 12 12:54:44 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:24 . Memory (MB): peak = 55.293 ; gain = 0.941
+INFO: [Common 17-206] Exiting Webtalk at Wed Dec 12 12:54:44 2018...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:27 . Memory (MB): peak = 2509.469 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '27' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2520.070 ; gain = 10.602
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:36 . Memory (MB): peak = 2520.070 ; gain = 10.602
+refresh_design
+INFO: [Netlist 29-17] Analyzing 294 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.799 . Memory (MB): peak = 2520.070 ; gain = 0.000
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.801 . Memory (MB): peak = 2520.070 ; gain = 0.000
+refresh_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2520.070 ; gain = 0.000
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+open_hw
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Wed Dec 12 13:51:01 2018] Launched impl_1...
+Run output will be captured here: C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+current_project red_pitaya
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Wed Dec 12 14:30:43 2018] Launched synth_1...
+Run output will be captured here: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/runme.log
+[Wed Dec 12 14:30:43 2018] Launched impl_1...
+Run output will be captured here: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/impl_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 294 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.709 . Memory (MB): peak = 2520.070 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.711 . Memory (MB): peak = 2520.070 ; gain = 0.000
+refresh_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2520.070 ; gain = 0.000
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+report_ip_status -name ip_status 
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+set_property flow {Vivado Synthesis 2018} [get_runs synth_1]
+create_run synth_2 -flow {Vivado Synthesis 2018} -strategy {Vivado Synthesis Defaults} -report_strategy {Vivado Synthesis Default Reports}
+Run is defaulting to srcset: sources_1
+Run is defaulting to constrset: constrs_1
+Run is defaulting to part: xc7z010clg400-1
+current_run [get_runs synth_2]
+set_property STEPS.SYNTH_DESIGN.ARGS.FLATTEN_HIERARCHY none [get_runs synth_2]
+set_property STEPS.SYNTH_DESIGN.ARGS.BUFG 16 [get_runs synth_2]
+set_property STEPS.SYNTH_DESIGN.ARGS.RETIMING true [get_runs synth_2]
+set_property STEPS.SYNTH_DESIGN.ARGS.KEEP_EQUIVALENT_REGISTERS true [get_runs synth_2]
+set_property STEPS.SYNTH_DESIGN.ARGS.RESOURCE_SHARING off [get_runs synth_2]
+set_property STEPS.SYNTH_DESIGN.ARGS.NO_LC true [get_runs synth_2]
+update_ip_catalog
+update_ip_catalog
+launch_runs impl_2 -to_step write_bitstream -jobs 3
+[Wed Dec 12 15:48:07 2018] Launched synth_2...
+Run output will be captured here: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_2/runme.log
+[Wed Dec 12 15:48:07 2018] Launched impl_2...
+Run output will be captured here: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/impl_2/runme.log
+reset_run impl_2 -prev_step 
+launch_runs impl_2 -to_step write_bitstream -jobs 3
+[Thu Dec 13 13:20:40 2018] Launched impl_2...
+Run output will be captured here: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/impl_2/runme.log
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 3
+[Thu Dec 13 15:53:50 2018] Launched synth_2...
+Run output will be captured here: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_2/runme.log
+[Thu Dec 13 15:53:50 2018] Launched impl_2...
+Run output will be captured here: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/impl_2/runme.log
+current_project red_pitaya(2)
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1
+
+launch_runs synth_1 -jobs 3
+[Fri Dec 14 09:13:21 2018] Launched synth_1...
+Run output will be captured here: C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:26 . Memory (MB): peak = 2646.797 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim/xsim.dir/LockInAmplifierTestBench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim/xsim.dir/LockInAmplifierTestBench_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Dec 14 09:15:57 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:24 . Memory (MB): peak = 55.148 ; gain = 0.992
+INFO: [Common 17-206] Exiting Webtalk at Fri Dec 14 09:15:57 2018...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:27 . Memory (MB): peak = 2646.797 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '28' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2652.781 ; gain = 5.984
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:36 . Memory (MB): peak = 2652.781 ; gain = 5.984
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2662.492 ; gain = 2.656
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 2662.492 ; gain = 2.656
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2664.223 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2664.223 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2669.117 ; gain = 2.082
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 2669.117 ; gain = 2.082
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2673.277 ; gain = 0.344
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 2673.277 ; gain = 0.344
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2675.082 ; gain = 1.730
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 2675.082 ; gain = 1.730
+save_wave_config {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg}
+current_project red_pitaya
+current_project red_pitaya(2)
+save_wave_config {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg}
+current_project red_pitaya
+current_project red_pitaya(2)
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+xsim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2682.742 ; gain = 5.578
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 2682.742 ; gain = 5.578
+current_wave_config {LockInAmplifierTestBench_behav.wcfg}
+LockInAmplifierTestBench_behav.wcfg
+add_wave {{/LockInAmplifierTestBench/LIA/internalCombinedOutput}} 
+save_wave_config {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2683.531 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 2683.531 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LockInAmplifierTestBench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj LockInAmplifierTestBench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifier
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignalGeneration
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LockInAmplifierTestBench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LockInAmplifierTestBench_behav -key {Behavioral:sim_1:Functional:LockInAmplifierTestBench} -tclbatch {LockInAmplifierTestBench.tcl} -view {C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/LockInAmplifierTestBench_behav.wcfg
+source LockInAmplifierTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 2000000ns
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2683.531 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LockInAmplifierTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 2683.531 ; gain = 0.000
+current_project red_pitaya
+reset_run synth_2
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_2
+
+launch_runs impl_2 -to_step write_bitstream -jobs 3
+[Fri Dec 14 10:18:49 2018] Launched synth_2...
+Run output will be captured here: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_2/runme.log
+[Fri Dec 14 10:18:49 2018] Launched impl_2...
+Run output will be captured here: H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/impl_2/runme.log

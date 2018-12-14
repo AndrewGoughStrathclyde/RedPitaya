@@ -33,7 +33,9 @@ module LockInAmplifier
    
    output   signed  [ 14-1: 0] LIAOutput_InPhaseOutput,
    output   signed  [ 14-1: 0] LIAOutput_OutPhaseOutput,
-   output   signed  [ 14-1: 0] MiscRamp
+   output   signed  [ 14-1: 0] MiscRamp, 
+   
+   output   signed  [ 14-1: 0] combinedOutput
 );
 
     //reg signed [14-1:0]    LIAOutput;
@@ -45,7 +47,9 @@ module LockInAmplifier
     
     reg signed [64-1:0]    resultAccumulator = 64'h0000000000000000;
     reg signed [64-1:0]    outPhaseResultAccumulator = 64'h0000000000000000;
-    reg signed [14-1:0]   miscRampOutput = 14'b10000000000000;
+    reg signed [14-1:0]    miscRampOutput = 14'b10000000000000;
+    reg signed [14-1:0]    internalCombinedOutput = 14'b00000000000000;
+    reg signed [ 2-1:0]    outputCounter = 2'b00;
     
 always @(posedge dac_clk_i) begin
  //   if (mhzClockIn == 1)
@@ -61,7 +65,7 @@ always @(posedge dac_clk_i) begin
     demodSignalOutPhase = $signed(outPhase) * $signed(adcInputChannel1); 
 
 
-    resultAccumulator = (resultAccumulator + demodSignalInPhase);//>>>14; // Might need to bit shift it to the right 14 bits. 
+    resultAccumulator = (resultAccumulator + demodSignalInPhase);
     outPhaseResultAccumulator = (outPhaseResultAccumulator + demodSignalOutPhase);
     if(mhzClockIn == 1)    
     begin
@@ -69,10 +73,36 @@ always @(posedge dac_clk_i) begin
     miscRampOutput <= miscRampOutput + 1'b1;
     
     // Bit shift on the end can be changed in order to change the results which are being output in order to calibrate LIA - might need to vary depending on input waveform amplitude
-    InPhaseOutput <= ((resultAccumulator>>>7)+(resultAccumulator>>>13)+(resultAccumulator>>>14))>>>9;// Doing 1/125, this will need to be calibrated with the actual experimental conditions
-    OutPhaseOutput <= ((outPhaseResultAccumulator>>>7)+(outPhaseResultAccumulator>>>13)+(outPhaseResultAccumulator>>>14))>>>9;//Doing 1/125, this will need to be calibrated with the actual experimental conditions
+//    InPhaseOutput<= (({{16{resultAccumulator[63]}},resultAccumulator[63:15]})+({{22{resultAccumulator[63]}},resultAccumulator[63:21]})+({{23{resultAccumulator[63]}},resultAccumulator[63:22]}));// Doing 1/125, this will need to be calibrated with the actual experimental conditions
+    InPhaseOutput<= (({{19{resultAccumulator[63]}},resultAccumulator[63:18]})+({{25{resultAccumulator[63]}},resultAccumulator[63:24]})+({{26{resultAccumulator[63]}},resultAccumulator[63:25]}));// Doing 1/125, this will need to be calibrated with the actual experimental conditions
+    OutPhaseOutput<= (({{19{outPhaseResultAccumulator[63]}},outPhaseResultAccumulator[63:18]})+({{25{outPhaseResultAccumulator[63]}},outPhaseResultAccumulator[63:24]})+({{26{outPhaseResultAccumulator[63]}},outPhaseResultAccumulator[63:25]}));// Doing 1/125, this will need to be calibrated with the actual experimental conditions
+//    OutPhaseOutput<=  ((outPhaseResultAccumulator>>>16)+(outPhaseResultAccumulator>>>22)+(outPhaseResultAccumulator>>>23));// Doing 1/125, this will need to be calibrated with the actual experimental conditions
     resultAccumulator <= 64'h0000000000000000; 
     outPhaseResultAccumulator <= 64'h0000000000000000;
+    outputCounter = 2'b10;
+    end
+    
+    if (outputCounter >  2'b00)
+    begin
+        
+        if (outputCounter == 2'b10) 
+        begin
+        internalCombinedOutput = InPhaseOutput; 
+        end
+        
+        if (outputCounter == 2'b11) 
+        begin
+        internalCombinedOutput = OutPhaseOutput; 
+        end  
+        
+        outputCounter = outputCounter+ 2'b01;
+        
+    end
+    else
+    begin
+    
+    internalCombinedOutput = 14'b00000000000000;
+    
     end
     
 end
@@ -80,5 +110,6 @@ end
 assign LIAOutput_InPhaseOutput = InPhaseOutput; 
 assign LIAOutput_OutPhaseOutput= OutPhaseOutput; 
 assign MiscRamp                = miscRampOutput;
+assign combinedOutput          = internalCombinedOutput; 
 
 endmodule

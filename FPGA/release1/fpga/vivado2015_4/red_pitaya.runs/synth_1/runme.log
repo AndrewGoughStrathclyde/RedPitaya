@@ -17,22 +17,22 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 16408 
+INFO: Helper process launched with PID 10112 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 400.742 ; gain = 105.277
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 399.922 ; gain = 104.316
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'red_pitaya_top' [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:78]
+INFO: [Synth 8-6157] synthesizing module 'red_pitaya_top' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:78]
 	Parameter SYSCONF_ID bound to: -1048574 - type: integer 
 	Parameter SYSCONF_REGIONS bound to: 8 - type: integer 
 	Parameter FIRST_FREE bound to: 6 - type: integer 
 	Parameter SYSR bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'red_pitaya_ps' [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_ps.v:52]
-INFO: [Synth 8-6157] synthesizing module 'axi_dummy_read_master' [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/axi_master.v:34]
+INFO: [Synth 8-6157] synthesizing module 'red_pitaya_ps' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_ps.v:52]
+INFO: [Synth 8-6157] synthesizing module 'axi_dummy_read_master' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/axi_master.v:34]
 	Parameter AXI_DW bound to: 64 - type: integer 
 	Parameter AXI_AW bound to: 32 - type: integer 
 	Parameter AXI_IW bound to: 6 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_dummy_read_master' (1#1) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/axi_master.v:34]
-INFO: [Synth 8-6157] synthesizing module 'axi_dump2ddr_master' [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/axi_master.v:101]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dummy_read_master' (1#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/axi_master.v:34]
+INFO: [Synth 8-6157] synthesizing module 'axi_dump2ddr_master' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/axi_master.v:101]
 	Parameter AXI_DW bound to: 64 - type: integer 
 	Parameter AXI_AW bound to: 32 - type: integer 
 	Parameter AXI_IW bound to: 6 - type: integer 
@@ -41,21 +41,21 @@ INFO: [Synth 8-6157] synthesizing module 'axi_dump2ddr_master' [C:/Users/djb1216
 	Parameter BUF_CH bound to: 2 - type: integer 
 	Parameter AXI_CW bound to: 6 - type: integer 
 	Parameter AXI_CI bound to: 6'b011111 
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/axi_master.v:443]
-INFO: [Synth 8-6155] done synthesizing module 'axi_dump2ddr_master' (2#1) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/axi_master.v:101]
-INFO: [Synth 8-6157] synthesizing module 'axi_slave' [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/axi_slave.v:52]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/axi_master.v:443]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dump2ddr_master' (2#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/axi_master.v:101]
+INFO: [Synth 8-6157] synthesizing module 'axi_slave' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/axi_slave.v:52]
 	Parameter AXI_DW bound to: 32 - type: integer 
 	Parameter AXI_AW bound to: 32 - type: integer 
 	Parameter AXI_IW bound to: 12 - type: integer 
 	Parameter AXI_SW bound to: 4 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element wr_wid_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/axi_slave.v:183]
-INFO: [Synth 8-6155] done synthesizing module 'axi_slave' (3#1) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/axi_slave.v:52]
+WARNING: [Synth 8-6014] Unused sequential element wr_wid_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/axi_slave.v:183]
+INFO: [Synth 8-6155] done synthesizing module 'axi_slave' (3#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/axi_slave.v:52]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (4#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
-INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'system' [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/synth/system.v:13]
-INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [c:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:60]
-INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [c:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:162]
+INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'system' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/synth/system.v:13]
+INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [h:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [h:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:162]
 	Parameter C_USE_DEFAULT_ACP_USER_VAL bound to: 0 - type: integer 
 	Parameter C_S_AXI_ACP_ARUSER_VAL bound to: 31 - type: integer 
 	Parameter C_S_AXI_ACP_AWUSER_VAL bound to: 31 - type: integer 
@@ -112,18 +112,18 @@ INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_sys
 	Parameter C_USE_S_AXI_ACP bound to: 0 - type: integer 
 	Parameter C_GP0_EN_MODIFIABLE_TXN bound to: 0 - type: integer 
 	Parameter C_GP1_EN_MODIFIABLE_TXN bound to: 0 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1348]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1349]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [h:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1348]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [h:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1349]
 INFO: [Synth 8-6157] synthesizing module 'BIBUF' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:270]
 INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (5#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:270]
 INFO: [Synth 8-6157] synthesizing module 'PS7' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:40565]
 INFO: [Synth 8-6155] done synthesizing module 'PS7' (6#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:40565]
-INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (7#1) [c:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:162]
-WARNING: [Synth 8-350] instance 'inst' of module 'processing_system7_v5_5_processing_system7' requires 685 connections, but only 672 given [c:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:567]
-INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (8#1) [c:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:60]
-WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'system_processing_system7_0_0' requires 144 connections, but only 125 given [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/synth/system.v:536]
-INFO: [Synth 8-6157] synthesizing module 'system_xlconcat_0_0' [c:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_xlconcat_0_0/synth/system_xlconcat_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [c:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (7#1) [h:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:162]
+WARNING: [Synth 8-350] instance 'inst' of module 'processing_system7_v5_5_processing_system7' requires 685 connections, but only 672 given [h:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:567]
+INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (8#1) [h:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:60]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'system_processing_system7_0_0' requires 144 connections, but only 125 given [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/synth/system.v:536]
+INFO: [Synth 8-6157] synthesizing module 'system_xlconcat_0_0' [h:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_xlconcat_0_0/synth/system_xlconcat_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [h:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
 	Parameter IN1_WIDTH bound to: 1 - type: integer 
 	Parameter IN2_WIDTH bound to: 1 - type: integer 
@@ -158,12 +158,12 @@ INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [c:/Users/dj
 	Parameter IN31_WIDTH bound to: 1 - type: integer 
 	Parameter dout_width bound to: 16 - type: integer 
 	Parameter NUM_PORTS bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (9#1) [c:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'system_xlconcat_0_0' (10#1) [c:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_xlconcat_0_0/synth/system_xlconcat_0_0.v:58]
-INFO: [Synth 8-6155] done synthesizing module 'system' (11#1) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/synth/system.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (12#1) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'red_pitaya_ps' (13#1) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_ps.v:52]
-INFO: [Synth 8-6157] synthesizing module 'red_pitaya_analog' [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_analog.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (9#1) [h:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconcat_0_0' (10#1) [h:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_xlconcat_0_0/synth/system_xlconcat_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'system' (11#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/synth/system.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (12#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'red_pitaya_ps' (13#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_ps.v:52]
+INFO: [Synth 8-6157] synthesizing module 'red_pitaya_analog' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_analog.v:64]
 	Parameter PWM_FULL bound to: 8'b10011100 
 INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19488]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
@@ -215,22 +215,22 @@ INFO: [Synth 8-6157] synthesizing module 'ODDR' [C:/Xilinx/Vivado/2018.2/scripts
 	Parameter IS_D2_INVERTED bound to: 1'b0 
 	Parameter SRTYPE bound to: SYNC - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'ODDR' (16#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:30653]
-INFO: [Synth 8-6155] done synthesizing module 'red_pitaya_analog' (17#1) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_analog.v:64]
-INFO: [Synth 8-6157] synthesizing module 'red_pitaya_scope' [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'red_pitaya_analog' (17#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_analog.v:64]
+INFO: [Synth 8-6157] synthesizing module 'red_pitaya_scope' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v:59]
 	Parameter SYS_ID bound to: 2097154 - type: integer 
 	Parameter SYS_1 bound to: 0 - type: integer 
 	Parameter SYS_2 bound to: 0 - type: integer 
 	Parameter SYS_3 bound to: 0 - type: integer 
 	Parameter RSZ bound to: 14 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v:260]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v:263]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v:623]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v:844]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v:849]
-INFO: [Synth 8-6157] synthesizing module 'red_pitaya_dfilt1' [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:26]
-INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "yes" *) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:98]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v:260]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v:263]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v:623]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v:844]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v:849]
+INFO: [Synth 8-6157] synthesizing module 'red_pitaya_dfilt1' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:26]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "yes" *) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:98]
 WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
-INFO: [Synth 8-6155] done synthesizing module 'red_pitaya_dfilt1' (18#1) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'red_pitaya_dfilt1' (18#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:26]
 INFO: [Synth 8-6157] synthesizing module 'BRAM_SDP_MACRO' [C:/Xilinx/Vivado/2018.2/data/verilog/src/unimacro/BRAM_SDP_MACRO.v:34]
 	Parameter BRAM_SIZE bound to: 36Kb - type: string 
 	Parameter DEVICE bound to: 7SERIES - type: string 
@@ -591,38 +591,38 @@ INFO: [Synth 8-6157] synthesizing module 'RAMB36E1' [C:/Xilinx/Vivado/2018.2/scr
 	Parameter WRITE_WIDTH_B bound to: 18 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'RAMB36E1' (19#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:49526]
 INFO: [Synth 8-6155] done synthesizing module 'BRAM_SDP_MACRO' (20#1) [C:/Xilinx/Vivado/2018.2/data/verilog/src/unimacro/BRAM_SDP_MACRO.v:34]
-INFO: [Synth 8-6157] synthesizing module 'bus_clk_bridge' [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/bus_clk_bridge.v:38]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/bus_clk_bridge.v:73]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/bus_clk_bridge.v:76]
-INFO: [Synth 8-6155] done synthesizing module 'bus_clk_bridge' (21#1) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/bus_clk_bridge.v:38]
-INFO: [Synth 8-6155] done synthesizing module 'red_pitaya_scope' (22#1) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v:59]
-INFO: [Synth 8-6157] synthesizing module 'SignalGeneration' [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:23]
-WARNING: [Synth 8-6090] variable 'clkCounterB' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:685]
-INFO: [Synth 8-6155] done synthesizing module 'SignalGeneration' (23#1) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:23]
-INFO: [Synth 8-6157] synthesizing module 'LockInAmplifier' [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:23]
-WARNING: [Synth 8-6090] variable 'resultAccumulator' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:74]
-WARNING: [Synth 8-6090] variable 'outPhaseResultAccumulator' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:75]
-WARNING: [Synth 8-6014] Unused sequential element demodSignalInPhase_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:60]
-WARNING: [Synth 8-6014] Unused sequential element demodSignalOutPhase_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:61]
-INFO: [Synth 8-6155] done synthesizing module 'LockInAmplifier' (24#1) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:23]
-INFO: [Synth 8-6157] synthesizing module 'red_pitaya_pid' [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid.v:52]
+INFO: [Synth 8-6157] synthesizing module 'bus_clk_bridge' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/bus_clk_bridge.v:38]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/bus_clk_bridge.v:73]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "true" *) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/bus_clk_bridge.v:76]
+INFO: [Synth 8-6155] done synthesizing module 'bus_clk_bridge' (21#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/bus_clk_bridge.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'red_pitaya_scope' (22#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_scope.v:59]
+INFO: [Synth 8-6157] synthesizing module 'SignalGeneration' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:23]
+WARNING: [Synth 8-6090] variable 'clkCounterB' is written by both blocking and non-blocking assignments, entire logic could be removed [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:685]
+INFO: [Synth 8-6155] done synthesizing module 'SignalGeneration' (23#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:23]
+INFO: [Synth 8-6157] synthesizing module 'LockInAmplifier' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:23]
+WARNING: [Synth 8-6090] variable 'resultAccumulator' is written by both blocking and non-blocking assignments, entire logic could be removed [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:75]
+WARNING: [Synth 8-6090] variable 'outPhaseResultAccumulator' is written by both blocking and non-blocking assignments, entire logic could be removed [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:76]
+WARNING: [Synth 8-6014] Unused sequential element demodSignalInPhase_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:60]
+WARNING: [Synth 8-6014] Unused sequential element demodSignalOutPhase_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'LockInAmplifier' (24#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:23]
+INFO: [Synth 8-6157] synthesizing module 'red_pitaya_pid' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid.v:52]
 	Parameter PSR bound to: 12 - type: integer 
 	Parameter ISR bound to: 18 - type: integer 
 	Parameter DSR bound to: 10 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'red_pitaya_pid_block' [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:49]
+INFO: [Synth 8-6157] synthesizing module 'red_pitaya_pid_block' [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:49]
 	Parameter PSR bound to: 12 - type: integer 
 	Parameter ISR bound to: 18 - type: integer 
 	Parameter DSR bound to: 10 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'red_pitaya_pid_block' (25#1) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:49]
-INFO: [Synth 8-6155] done synthesizing module 'red_pitaya_pid' (26#1) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid.v:52]
-WARNING: [Synth 8-3848] Net led_o in module/entity red_pitaya_top does not have driver. [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:143]
-WARNING: [Synth 8-3848] Net gpio_irq0 in module/entity red_pitaya_top does not have driver. [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:176]
-WARNING: [Synth 8-3848] Net dac_pwm_a in module/entity red_pitaya_top does not have driver. [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:407]
-WARNING: [Synth 8-3848] Net dac_pwm_b in module/entity red_pitaya_top does not have driver. [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:408]
-WARNING: [Synth 8-3848] Net dac_pwm_c in module/entity red_pitaya_top does not have driver. [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:409]
-WARNING: [Synth 8-3848] Net dac_pwm_d in module/entity red_pitaya_top does not have driver. [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:410]
-WARNING: [Synth 8-3848] Net trig_asg_out in module/entity red_pitaya_top does not have driver. [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:513]
-INFO: [Synth 8-6155] done synthesizing module 'red_pitaya_top' (27#1) [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:78]
+INFO: [Synth 8-6155] done synthesizing module 'red_pitaya_pid_block' (25#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'red_pitaya_pid' (26#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid.v:52]
+WARNING: [Synth 8-3848] Net led_o in module/entity red_pitaya_top does not have driver. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:143]
+WARNING: [Synth 8-3848] Net gpio_irq0 in module/entity red_pitaya_top does not have driver. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:176]
+WARNING: [Synth 8-3848] Net dac_pwm_a in module/entity red_pitaya_top does not have driver. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:407]
+WARNING: [Synth 8-3848] Net dac_pwm_b in module/entity red_pitaya_top does not have driver. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:408]
+WARNING: [Synth 8-3848] Net dac_pwm_c in module/entity red_pitaya_top does not have driver. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:409]
+WARNING: [Synth 8-3848] Net dac_pwm_d in module/entity red_pitaya_top does not have driver. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:410]
+WARNING: [Synth 8-3848] Net trig_asg_out in module/entity red_pitaya_top does not have driver. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:513]
+INFO: [Synth 8-6155] done synthesizing module 'red_pitaya_top' (27#1) [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:78]
 WARNING: [Synth 8-3917] design red_pitaya_top has port adc_clk_o[1] driven by constant 1
 WARNING: [Synth 8-3917] design red_pitaya_top has port adc_clk_o[0] driven by constant 0
 WARNING: [Synth 8-3917] design red_pitaya_top has port adc_cdcs_o driven by constant 1
@@ -728,7 +728,7 @@ WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has un
 WARNING: [Synth 8-3331] design axi_slave has unconnected port axi_awburst_i[1]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 479.348 ; gain = 183.883
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 478.430 ; gain = 182.824
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -737,112 +737,112 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin i_ps:irq_f2p[10] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:308]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[23] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[22] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[21] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[20] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[19] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[18] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[17] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[16] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[15] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[14] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[13] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[12] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[11] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[10] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[9] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[8] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[7] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[6] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[5] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[4] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[3] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[2] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[1] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[0] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[23] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[22] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[21] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[20] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[19] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[18] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[17] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[16] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[15] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[14] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[13] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[12] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[11] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[10] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[9] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[8] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[7] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[6] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[5] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[4] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[3] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[2] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[1] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[0] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[23] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[22] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[21] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[20] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[19] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[18] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[17] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[16] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[15] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[14] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[13] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[12] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[11] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[10] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[9] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[8] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[7] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[6] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[5] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[4] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[3] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[2] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[1] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[0] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[23] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[22] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[21] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[20] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[19] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[18] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[17] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[16] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[15] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[14] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[13] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[12] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[11] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[10] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[9] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[8] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[7] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[6] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[5] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[4] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[3] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[2] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[1] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[0] to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
-WARNING: [Synth 8-3295] tying undriven pin i_scope:trig_asg_i to constant 0 [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:518]
+WARNING: [Synth 8-3295] tying undriven pin i_ps:irq_f2p[10] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:308]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[23] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[22] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[21] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[20] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[19] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[18] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[17] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[16] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[15] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[14] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[13] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[12] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[11] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[10] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[9] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[8] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[7] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[6] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[5] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[4] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[3] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[2] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[1] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_a_i[0] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[23] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[22] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[21] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[20] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[19] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[18] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[17] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[16] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[15] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[14] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[13] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[12] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[11] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[10] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[9] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[8] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[7] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[6] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[5] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[4] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[3] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[2] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[1] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_b_i[0] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[23] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[22] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[21] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[20] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[19] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[18] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[17] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[16] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[15] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[14] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[13] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[12] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[11] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[10] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[9] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[8] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[7] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[6] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[5] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[4] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[3] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[2] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[1] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_c_i[0] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[23] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[22] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[21] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[20] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[19] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[18] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[17] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[16] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[15] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[14] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[13] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[12] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[11] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[10] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[9] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[8] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[7] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[6] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[5] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[4] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[3] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[2] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[1] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_analog:dac_pwm_d_i[0] to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:412]
+WARNING: [Synth 8-3295] tying undriven pin i_scope:trig_asg_i to constant 0 [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_top.v:518]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 479.348 ; gain = 183.883
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 478.430 ; gain = 182.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 479.348 ; gain = 183.883
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 478.430 ; gain = 182.824
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -851,36 +851,36 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'i_ps/system_i/system_i/processing_system7_0/inst'
-Finished Parsing XDC File [c:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'i_ps/system_i/system_i/processing_system7_0/inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/red_pitaya_top_propImpl.xdc].
+Parsing XDC File [h:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'i_ps/system_i/system_i/processing_system7_0/inst'
+Finished Parsing XDC File [h:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'i_ps/system_i/system_i/processing_system7_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [h:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/red_pitaya_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/red_pitaya_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc]
-INFO: [Timing 38-2] Deriving generated clocks [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc:265]
-Finished Parsing XDC File [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/red_pitaya_top_propImpl.xdc].
+Parsing XDC File [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc]
+INFO: [Timing 38-2] Deriving generated clocks [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc:265]
+Finished Parsing XDC File [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/red_pitaya2015_4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/red_pitaya_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/red_pitaya_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/constrs_1/red_pitaya_top.xdc]
-Finished Parsing XDC File [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/constrs_1/red_pitaya_top.xdc]
-Parsing XDC File [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/dont_touch.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/red_pitaya_top_propImpl.xdc].
+Parsing XDC File [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/constrs_1/red_pitaya_top.xdc]
+Finished Parsing XDC File [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.srcs/constrs_1/red_pitaya_top.xdc]
+Parsing XDC File [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/red_pitaya_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/red_pitaya_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 834.590 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 833.922 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 834.590 ; gain = 539.125
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 833.922 ; gain = 538.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 834.590 ; gain = 539.125
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 833.922 ; gain = 538.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -888,22 +888,22 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for i_ps/system_i/system_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for i_ps/system_i/system_i/processing_system7_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for i_ps/system_i/system_i/xlconcat_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for i_ps/system_i/system_i/processing_system7_0/inst. (constraint file  C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/dont_touch.xdc, line 18).
+Applied set_property DONT_TOUCH = true for i_ps/system_i/system_i/processing_system7_0/inst. (constraint file  {H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/dont_touch.xdc}, line 18).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 834.590 ; gain = 539.125
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 833.922 ; gain = 538.316
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "dac_pwm_bcnt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "dac_pwm_va0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element cfg_aa_r_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:52]
-WARNING: [Synth 8-6014] Unused sequential element cfg_bb_r_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:53]
-WARNING: [Synth 8-6014] Unused sequential element cfg_pp_r_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:55]
-WARNING: [Synth 8-6014] Unused sequential element r2_reg_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:79]
-WARNING: [Synth 8-6014] Unused sequential element r4_reg_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:124]
-WARNING: [Synth 8-6014] Unused sequential element r4_reg_r_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:154]
-WARNING: [Synth 8-6014] Unused sequential element r4_reg_rr_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:150]
-WARNING: [Synth 8-6014] Unused sequential element  was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:101]
-WARNING: [Synth 8-6014] Unused sequential element  was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:102]
-WARNING: [Synth 8-6014] Unused sequential element cfg_kk_r_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:54]
+WARNING: [Synth 8-6014] Unused sequential element cfg_aa_r_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:52]
+WARNING: [Synth 8-6014] Unused sequential element cfg_bb_r_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:53]
+WARNING: [Synth 8-6014] Unused sequential element cfg_pp_r_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:55]
+WARNING: [Synth 8-6014] Unused sequential element r2_reg_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:79]
+WARNING: [Synth 8-6014] Unused sequential element r4_reg_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:124]
+WARNING: [Synth 8-6014] Unused sequential element r4_reg_r_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:154]
+WARNING: [Synth 8-6014] Unused sequential element r4_reg_rr_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:150]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:101]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:102]
+WARNING: [Synth 8-6014] Unused sequential element cfg_kk_r_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:54]
 INFO: [Synth 8-5546] ROM "ext_trig_dp" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ext_trig_dn" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "asg_trig_dp" won't be mapped to RAM because it is too sparse
@@ -931,12 +931,12 @@ INFO: [Synth 8-5546] ROM "ddr_control" won't be mapped to RAM because it is too 
 WARNING: [Synth 8-6040] Register clkCounterA_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 WARNING: [Synth 8-6040] Register clkCounterA_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 WARNING: [Synth 8-6040] Register clkCounterB_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
-WARNING: [Synth 8-6014] Unused sequential element dacOutputA_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:47]
-WARNING: [Synth 8-6014] Unused sequential element dacOutputC_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:47]
-WARNING: [Synth 8-6014] Unused sequential element dacOutputB_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:185]
-WARNING: [Synth 8-6014] Unused sequential element ki_mult_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:127]
-WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
-WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
+WARNING: [Synth 8-6014] Unused sequential element dacOutputA_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:47]
+WARNING: [Synth 8-6014] Unused sequential element dacOutputC_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:47]
+WARNING: [Synth 8-6014] Unused sequential element dacOutputB_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:185]
+WARNING: [Synth 8-6014] Unused sequential element ki_mult_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:127]
+WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
+WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
 INFO: [Synth 8-5546] ROM "set_11_sp" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "set_11_kp" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "set_11_ki" won't be mapped to RAM because it is too sparse
@@ -957,7 +957,7 @@ INFO: [Synth 8-5546] ROM "set_22_kd" won't be mapped to RAM because it is too sp
 INFO: [Synth 8-5546] ROM "sysconf_cs" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "sysconf_rdata" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 834.590 ; gain = 539.125
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 833.922 ; gain = 538.316
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1251,17 +1251,17 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5546] ROM "dac_pwm_bcnt" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element cfg_bb_r_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:53]
-WARNING: [Synth 8-6014] Unused sequential element cfg_aa_r_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:52]
-WARNING: [Synth 8-6014] Unused sequential element C was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:102]
-WARNING: [Synth 8-6014] Unused sequential element r4_reg_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:124]
-WARNING: [Synth 8-6014] Unused sequential element r3_reg_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:101]
-WARNING: [Synth 8-6014] Unused sequential element cfg_pp_r_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:55]
-WARNING: [Synth 8-6014] Unused sequential element C was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:101]
-WARNING: [Synth 8-6014] Unused sequential element r4_reg_r_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:154]
-WARNING: [Synth 8-6014] Unused sequential element r4_reg_rr_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:150]
-WARNING: [Synth 8-6014] Unused sequential element  was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:102]
-WARNING: [Synth 8-6014] Unused sequential element cfg_kk_r_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:54]
+WARNING: [Synth 8-6014] Unused sequential element cfg_bb_r_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:53]
+WARNING: [Synth 8-6014] Unused sequential element cfg_aa_r_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:52]
+WARNING: [Synth 8-6014] Unused sequential element C was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:102]
+WARNING: [Synth 8-6014] Unused sequential element r4_reg_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:124]
+WARNING: [Synth 8-6014] Unused sequential element r3_reg_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:101]
+WARNING: [Synth 8-6014] Unused sequential element cfg_pp_r_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:55]
+WARNING: [Synth 8-6014] Unused sequential element C was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:101]
+WARNING: [Synth 8-6014] Unused sequential element r4_reg_r_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:154]
+WARNING: [Synth 8-6014] Unused sequential element r4_reg_rr_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:150]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:102]
+WARNING: [Synth 8-6014] Unused sequential element cfg_kk_r_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:54]
 DSP Report: Generating DSP bb_mult, operation Mode is: A2*B.
 DSP Report: register cfg_bb_r_reg is absorbed into DSP bb_mult.
 DSP Report: operator bb_mult is absorbed into DSP bb_mult.
@@ -1284,19 +1284,19 @@ DSP Report: register cfg_kk_r_reg is absorbed into DSP kk_mult.
 DSP Report: register r4_reg_r_reg is absorbed into DSP kk_mult.
 DSP Report: register r4_reg_rr_reg is absorbed into DSP kk_mult.
 DSP Report: operator kk_mult is absorbed into DSP kk_mult.
-WARNING: [Synth 8-6014] Unused sequential element cfg_bb_r_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:53]
-WARNING: [Synth 8-6014] Unused sequential element cfg_aa_r_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:52]
-WARNING: [Synth 8-6014] Unused sequential element r3_reg_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:101]
-WARNING: [Synth 8-6014] Unused sequential element C was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:101]
-WARNING: [Synth 8-6014] Unused sequential element C was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:102]
-WARNING: [Synth 8-6014] Unused sequential element A was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:102]
-WARNING: [Synth 8-6014] Unused sequential element r4_reg_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:124]
-WARNING: [Synth 8-6014] Unused sequential element cfg_pp_r_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:55]
-WARNING: [Synth 8-6014] Unused sequential element r4_reg_r_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:154]
-WARNING: [Synth 8-6014] Unused sequential element r4_reg_rr_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:150]
-WARNING: [Synth 8-6014] Unused sequential element  was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:102]
-WARNING: [Synth 8-6014] Unused sequential element  was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:102]
-WARNING: [Synth 8-6014] Unused sequential element cfg_kk_r_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:54]
+WARNING: [Synth 8-6014] Unused sequential element cfg_bb_r_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:53]
+WARNING: [Synth 8-6014] Unused sequential element cfg_aa_r_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:52]
+WARNING: [Synth 8-6014] Unused sequential element r3_reg_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:101]
+WARNING: [Synth 8-6014] Unused sequential element C was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:101]
+WARNING: [Synth 8-6014] Unused sequential element C was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:102]
+WARNING: [Synth 8-6014] Unused sequential element A was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:102]
+WARNING: [Synth 8-6014] Unused sequential element r4_reg_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:124]
+WARNING: [Synth 8-6014] Unused sequential element cfg_pp_r_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:55]
+WARNING: [Synth 8-6014] Unused sequential element r4_reg_r_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:154]
+WARNING: [Synth 8-6014] Unused sequential element r4_reg_rr_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:150]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:102]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:102]
+WARNING: [Synth 8-6014] Unused sequential element cfg_kk_r_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_dfilt1.v:54]
 DSP Report: Generating DSP bb_mult, operation Mode is: A2*B.
 DSP Report: register cfg_bb_r_reg is absorbed into DSP bb_mult.
 DSP Report: operator bb_mult is absorbed into DSP bb_mult.
@@ -1346,18 +1346,20 @@ INFO: [Synth 8-5546] ROM "set_b_filt_pp" won't be mapped to RAM because it is to
 WARNING: [Synth 8-6040] Register clkCounterB_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 WARNING: [Synth 8-6040] Register clkCounterA_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 WARNING: [Synth 8-6040] Register clkCounterA_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
-WARNING: [Synth 8-6014] Unused sequential element dacOutputB_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:185]
-WARNING: [Synth 8-6014] Unused sequential element dacOutputA_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:47]
-WARNING: [Synth 8-6014] Unused sequential element dacOutputC_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:47]
+WARNING: [Synth 8-6014] Unused sequential element dacOutputB_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:185]
+WARNING: [Synth 8-6014] Unused sequential element dacOutputA_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:47]
+WARNING: [Synth 8-6014] Unused sequential element dacOutputC_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/SignalGeneration.v:47]
+WARNING: [Synth 8-3936] Found unconnected internal register 'InPhaseOutput_reg' and it is trimmed from '64' to '14' bits. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:72]
+WARNING: [Synth 8-3936] Found unconnected internal register 'OutPhaseOutput_reg' and it is trimmed from '64' to '14' bits. [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifier.v:73]
 DSP Report: Generating DSP resultAccumulator1, operation Mode is: A*B.
 DSP Report: operator resultAccumulator1 is absorbed into DSP resultAccumulator1.
 DSP Report: Generating DSP outPhaseResultAccumulator1, operation Mode is: A*B.
 DSP Report: operator outPhaseResultAccumulator1 is absorbed into DSP outPhaseResultAccumulator1.
-WARNING: [Synth 8-6014] Unused sequential element ki_mult_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:127]
-WARNING: [Synth 8-6014] Unused sequential element int_reg_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:128]
-WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
-WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
-WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
+WARNING: [Synth 8-6014] Unused sequential element ki_mult_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:127]
+WARNING: [Synth 8-6014] Unused sequential element int_reg_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:128]
+WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
+WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
+WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
 DSP Report: Generating DSP int_sum, operation Mode is: C'+(A2*B)'.
 DSP Report: register error_reg is absorbed into DSP int_sum.
 DSP Report: register int_reg_reg is absorbed into DSP int_sum.
@@ -1370,11 +1372,11 @@ DSP Report: operator kd_mult is absorbed into DSP kd_mult.
 DSP Report: Generating DSP kp_mult, operation Mode is: A2*B.
 DSP Report: register error_reg is absorbed into DSP kp_mult.
 DSP Report: operator kp_mult is absorbed into DSP kp_mult.
-WARNING: [Synth 8-6014] Unused sequential element ki_mult_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:127]
-WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
-WARNING: [Synth 8-6014] Unused sequential element int_reg_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:128]
-WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
-WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
+WARNING: [Synth 8-6014] Unused sequential element ki_mult_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:127]
+WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
+WARNING: [Synth 8-6014] Unused sequential element int_reg_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:128]
+WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
+WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
 DSP Report: Generating DSP int_sum, operation Mode is: C'+(A2*B)'.
 DSP Report: register error_reg is absorbed into DSP int_sum.
 DSP Report: register int_reg_reg is absorbed into DSP int_sum.
@@ -1387,11 +1389,11 @@ DSP Report: operator kd_mult is absorbed into DSP kd_mult.
 DSP Report: Generating DSP kp_mult, operation Mode is: A2*B.
 DSP Report: register error_reg is absorbed into DSP kp_mult.
 DSP Report: operator kp_mult is absorbed into DSP kp_mult.
-WARNING: [Synth 8-6014] Unused sequential element ki_mult_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:127]
-WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
-WARNING: [Synth 8-6014] Unused sequential element int_reg_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:128]
-WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
-WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
+WARNING: [Synth 8-6014] Unused sequential element ki_mult_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:127]
+WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
+WARNING: [Synth 8-6014] Unused sequential element int_reg_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:128]
+WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
+WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
 DSP Report: Generating DSP int_sum, operation Mode is: C'+(A2*B)'.
 DSP Report: register error_reg is absorbed into DSP int_sum.
 DSP Report: register int_reg_reg is absorbed into DSP int_sum.
@@ -1404,11 +1406,11 @@ DSP Report: operator kd_mult is absorbed into DSP kd_mult.
 DSP Report: Generating DSP kp_mult, operation Mode is: A2*B.
 DSP Report: register error_reg is absorbed into DSP kp_mult.
 DSP Report: operator kp_mult is absorbed into DSP kp_mult.
-WARNING: [Synth 8-6014] Unused sequential element ki_mult_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:127]
-WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
-WARNING: [Synth 8-6014] Unused sequential element int_reg_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:128]
-WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
-WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
+WARNING: [Synth 8-6014] Unused sequential element ki_mult_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:127]
+WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
+WARNING: [Synth 8-6014] Unused sequential element int_reg_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:128]
+WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
+WARNING: [Synth 8-6014] Unused sequential element error_reg was removed.  [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/red_pitaya_pid_block.v:79]
 DSP Report: Generating DSP int_sum, operation Mode is: C'+(A2*B)'.
 DSP Report: register error_reg is absorbed into DSP int_sum.
 DSP Report: register int_reg_reg is absorbed into DSP int_sum.
@@ -1646,7 +1648,7 @@ WARNING: [Synth 8-3332] Sequential element (dac_pwm_vc_r_reg[7]) is unused and w
 WARNING: [Synth 8-3332] Sequential element (dac_pwm_vc_r_reg[6]) is unused and will be removed from module red_pitaya_analog.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 834.590 ; gain = 539.125
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 833.922 ; gain = 538.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1735,13 +1737,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1031.398 ; gain = 735.934
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 1037.145 ; gain = 741.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1097.500 ; gain = 802.035
+Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:58 . Memory (MB): peak = 1102.563 ; gain = 806.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1783,7 +1785,7 @@ INFO: [Synth 8-4480] The timing for the instance i_scope/adc_b_buf_reg_5 (implem
 INFO: [Synth 8-4480] The timing for the instance i_scope/adc_b_buf_reg_6 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance sigGen/dacOutputB_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 1097.500 ; gain = 802.035
+Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 1102.563 ; gain = 806.957
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1801,7 +1803,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 1097.500 ; gain = 802.035
+Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:01:03 . Memory (MB): peak = 1102.563 ; gain = 806.957
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1814,7 +1816,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 1097.500 ; gain = 802.035
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:01:03 . Memory (MB): peak = 1102.563 ; gain = 806.957
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1826,7 +1828,7 @@ Report RTL Partitions:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 1097.500 ; gain = 802.035
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:53 ; elapsed = 00:01:03 . Memory (MB): peak = 1102.563 ; gain = 806.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1844,18 +1846,18 @@ Report Cell Usage:
 +------+-----------+------+
 |1     |BIBUF      |   130|
 |2     |BUFG       |    14|
-|3     |CARRY4     |   186|
+|3     |CARRY4     |   182|
 |4     |DSP48E1    |     2|
 |5     |DSP48E1_1  |     4|
 |6     |DSP48E1_2  |     2|
 |7     |DSP48E1_3  |     2|
 |8     |DSP48E1_4  |     1|
 |9     |LUT1       |   535|
-|10    |LUT2       |   330|
-|11    |LUT3       |   196|
+|10    |LUT2       |   328|
+|11    |LUT3       |   187|
 |12    |LUT4       |   517|
 |13    |LUT5       |   376|
-|14    |LUT6       |   668|
+|14    |LUT6       |   659|
 |15    |MUXF7      |    50|
 |16    |ODDR       |    18|
 |17    |PLLE2_ADV  |     1|
@@ -1863,7 +1865,7 @@ Report Cell Usage:
 |19    |RAMB18E1   |     1|
 |20    |RAMB36E1   |     2|
 |21    |RAMB36E1_1 |    14|
-|22    |FDRE       |  1763|
+|22    |FDRE       |  1762|
 |23    |FDSE       |    70|
 |24    |IBUF       |    14|
 |25    |IBUFDS     |     1|
@@ -1875,7 +1877,7 @@ Report Instance Areas:
 +------+-----------------------------+-------------------------------------------+------+
 |      |Instance                     |Module                                     |Cells |
 +------+-----------------------------+-------------------------------------------+------+
-|1     |top                          |                                           |  4931|
+|1     |top                          |                                           |  4906|
 |2     |  i_ps                       |red_pitaya_ps                              |  1243|
 |3     |    i_hp0_dmaster            |axi_dump2ddr_master                        |   523|
 |4     |    i_gp0_slave              |axi_slave                                  |   229|
@@ -1892,18 +1894,18 @@ Report Instance Areas:
 |15    |    adc_b_buffer             |BRAM_SDP_MACRO                             |     1|
 |16    |    i_bridge_scope           |bus_clk_bridge__1                          |    72|
 |17    |  sigGen                     |SignalGeneration                           |   103|
-|18    |  LIA                        |LockInAmplifier                            |   197|
+|18    |  LIA                        |LockInAmplifier                            |   172|
 |19    |  i_pid                      |red_pitaya_pid                             |   397|
 |20    |    i_bridge_pid             |bus_clk_bridge                             |    50|
 +------+-----------------------------+-------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 1097.500 ; gain = 802.035
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:01:03 . Memory (MB): peak = 1102.563 ; gain = 806.957
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 825 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 1097.500 ; gain = 446.793
-Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 1097.500 ; gain = 802.035
+Synthesis finished with 0 errors, 0 critical warnings and 727 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:00:53 . Memory (MB): peak = 1102.563 ; gain = 451.465
+Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 1102.563 ; gain = 806.957
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 298 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 294 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -1911,11 +1913,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-308 Infos, 389 Warnings, 0 Critical Warnings and 0 Errors encountered.
+308 Infos, 391 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1097.500 ; gain = 809.207
+synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:07 . Memory (MB): peak = 1102.563 ; gain = 814.133
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/red_pitaya_top.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/vivado2015_4/red_pitaya.runs/synth_1/red_pitaya_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file red_pitaya_top_utilization_synth.rpt -pb red_pitaya_top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 1097.500 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 11 10:52:26 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1102.563 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 12 14:32:04 2018...

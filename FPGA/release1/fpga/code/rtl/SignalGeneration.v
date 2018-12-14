@@ -25,7 +25,7 @@ module SignalGeneration
    input                 dac_clk_i       ,  //!< DAC clock
    output     [ 14-1: 0] dac_a_o         ,  //!< DAC data CHA // Sin Modulation 
    output     [ 14-1: 0] dac_b_o         ,  //!< DAC data CHB // Carrier Wave
-   output     [ 14-1: 0] dac_a_90out_o,     //!               //Cosine Modulation
+   output     [ 14-1: 0] dac_a_90out_o   ,  //!               //Cosine Modulation
    output                syncOutput
 );
     reg [14-1:0]    dacOutputA = 14'b00000000000000;
@@ -695,8 +695,8 @@ end
 //assign dac_b_o = dacOutputB;
 
 assign dac_a_o = dacOutputB; // Carrier wave output goes to A
-assign dac_b_o = ($signed(dacOutputA)>>>2); // Modulation wave output goes to B
-assign dac_a_90out_o = ($signed(dacOutputC)>>>2); //Out of Phase modulation output
+assign dac_b_o = ($signed(dacOutputA)); // Modulation wave output goes to B
+assign dac_a_90out_o = ($signed(dacOutputC)); //Out of Phase modulation output
 assign syncOutput = sync;
 
  

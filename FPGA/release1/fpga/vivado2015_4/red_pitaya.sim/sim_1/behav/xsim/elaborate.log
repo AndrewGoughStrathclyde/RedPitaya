@@ -3,6 +3,13 @@ Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 104de15ca6b142a49a1bafcb2c51d857 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LockInAmplifierTestBench_behav xil_defaultlib.LockInAmplifierTestBench xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 14 for port LIAOutput_OutPhaseOutput [C:/Users/djb12169/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 14 for port LIAOutput_OutPhaseOutput [H:/PhD/Red Pitaya Fork/RedPitaya/FPGA/release1/fpga/code/rtl/LockInAmplifierTestBench.v:57]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SignalGeneration
+Compiling module xil_defaultlib.LockInAmplifier
+Compiling module xil_defaultlib.LockInAmplifierTestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LockInAmplifierTestBench_behav
